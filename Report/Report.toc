@@ -1,0 +1,13 @@
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {part}{List of Figures}{xiv}{}%
+\contentsline {part}{List of Tables}{xv}{}%
+\contentsline {section}{\numberline {1}Εισαγωγή}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Κατηγορίες κατάτμησης εικόνας}{1}{}%
+\contentsline {subsubsection}{\numberline {1.1.1}Σημασιολογική κατάτμηση εικόνας}{1}{}%

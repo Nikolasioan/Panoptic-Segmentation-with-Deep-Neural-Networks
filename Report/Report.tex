@@ -1,0 +1,200 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[greek,english]{babel}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\setmainfont{Times New Roman} % Μπορούσα και GFS Didot
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{emptypage}
+\usepackage{lipsum}
+
+\selectlanguage{greek}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+    \includegraphics[width=0.185\textwidth]{images/ntua_logo.png} \\ % Make sure the logo image exists here
+    \noindent\rule{0pt}{1.5em}
+
+
+    \textbf{\Large ΕΘΝΙΚΟ ΜΕΤΣΟΒΙΟ ΠΟΛΥΤΕΧΝΕΙΟ} \\[0.5em]
+    Σχολή Εφαρμοσμένων Μαθηματικών και Φυσικών Επιστημών \\[0.5em]
+    Τομέας Μαθηματικών \\[3em]
+
+\vspace{1.9cm} 
+
+    {\selectlanguage{english}
+    
+    \textbf{\Large Panoptic Segmentation with Deep Neural Networks} \\[2em]
+    }
+
+    \textbf{\LARGE ΔΙΠΛΩΜΑΤΙΚΗ ΕΡΓΑΣΙΑ} \\[1.5em]
+
+    του \\
+    \textbf{Νικόλα Ιωάννου} \\[4em]
+
+\vspace{1.8cm} 
+
+
+\hspace*{-0.3cm}\textbf{Επιβλέπων:} Παναγιώτης Τσανάκας       \hspace*{3.65cm} \textbf{Συνεπιβλέπων:} Γεώργιος Σιόλας \\
+\hspace*{1.76cm}Καθηγητής Ε.Μ.Π.  \hspace*{7.23cm}Ε.ΔΙ.Π. Ε.Μ.Π.
+
+\vspace{5.5 cm} 
+
+
+
+
+
+
+    \scalebox{0.9}{ΕΡΓΑΣΤΗΡΙΟ ΟΡΑΣΗΣ ΥΠΟΛΟΓΙΣΤΩΝ, ΕΠΙΚΟΙΝΩΝΙΑΣ ΛΟΓΟΥ ΚΑΙ ΕΠΕΞΕΡΓΑΣΙΑΣ ΣΗΜΑΤΩΝ} 
+ \\
+    \scalebox{1}{Αθήνα, Ιούλιος 2025}
+\end{center}
+\pagenumbering{roman}
+\newpage
+\mbox{}
+\newpage
+
+\begin{center}
+\noindent
+\begin{minipage}{0.2\textwidth}
+    \hspace*{10pt} %
+    \includegraphics[width=2.8cm,height=2.8cm]{images/ntua_logo.png} % Adjust path if needed
+\end{minipage}
+\hfill
+\begin{minipage}{0.75\textwidth}
+    \selectlanguage{greek}
+    \small % or \footnotesize or any other size you want
+    \textbf{Εθνικό Μετσόβιο Πολυτεχνείο}\\[-2pt]
+    Σχολή Εφαρμοσμένων Μαθηματικών και Φυσικών Επιστημών\\[-2pt]
+    Τομέας Μαθηματικών\\[-2pt]
+    Εργαστήριο Όρασης Υπολογιστών, Επικοινωνίας Λόγου και Επεξεργασίας Σημάτων
+\end{minipage}
+
+
+\vspace{2.5cm} 
+
+    {\selectlanguage{english}
+    
+    \textbf{\Large Panoptic Segmentation with Deep Neural Networks} \\[2em]
+    }
+
+    \textbf{\LARGE ΔΙΠΛΩΜΑΤΙΚΗ ΕΡΓΑΣΙΑ} \\[1.5em]
+
+    του \\
+    \textbf{Νικόλα Ιωάννου} \\[4em]
+
+\vspace{0.6cm} 
+
+
+\hspace*{-0.3cm}\textbf{Επιβλέπων:} Παναγιώτης Τσανάκας       \hspace*{3.65cm} \textbf{Συνεπιβλέπων:} Γεώργιος Σιόλας \\
+\hspace*{1.76cm}Καθηγητής Ε.Μ.Π.  \hspace*{7.23cm}Ε.ΔΙ.Π. Ε.Μ.Π.
+
+\vspace{2.5cm}
+\raggedright \small Εγκρίθηκε από την τριμελή εξεταστική επιτροπή την 1η Ιουλίου, 2025. \\
+
+\vspace{2cm}
+
+(Υπογραφή) (Υπογραφή) (Υπογραφή)\\
+\vspace{0.8 cm} 
+.................... .................... ....................\\
+Παναγιώτης Τσανάκας Αντώνιος Συμβώνης Γεώργιος Στάμου \\
+Καθηγητής Ε.Μ.Π. Καθηγητής Ε.Μ.Π. Καθηγητής Ε.Μ.Π. 	
+\vspace{3.5 cm} 
+
+
+
+
+
+
+    \scalebox{1}{Αθήνα, Ιούλιος 2025}
+\end{center}
+
+\newpage
+\mbox{}
+\newpage
+
+\vspace*{\fill}
+\begin{center}
+    \textbf{\Large ΜΠΕΝΕΤΟΥ ΣΜΑΡΑΓΔΗ}\\[10pt]
+    \textit{Διπλωματούχος Ηλεκτρολόγος Μηχανικός\\
+    και Μηχανικός Υπολογιστών Ε.Μ.Π.}
+\end{center}
+\vspace*{\fill}
+
+\vspace{2cm}
+
+\noindent \textcopyright{} -- All rights reserved \hfill Σμαραγδή Μπενέτου, 2023.\\
+Με επιφύλαξη παντός δικαιώματος.
+
+\vspace{1cm}
+
+\noindent Απαγορεύεται η αντιγραφή, αποθήκευση και διανομή της παρούσας εργασίας, εξ ολοκλήρου ή τμήματος αυτής, για\\
+εμπορικούς σκοπούς. Επιτρέπεται η ανατύπωση, αποθήκευση και διανομή για σκοπούς μη κερδοσκοπικούς, εκπαιδευτικής\\
+ή ερευνητικής φύσης, υπό την προϋπόθεση να αναφέρεται η πηγή προέλευσης και να διατηρείται το παρόν μήνυμα.\\
+Ερωτήματα που αφορούν τη χρήση της εργασίας, να απευθύνονται στον συγγραφέα.
+
+\vspace{1cm}
+
+\noindent Οι απόψεις και τα συμπεράσματα που περιέχονται σε αυτό το έγγραφο εκφράζουν τον συγγραφέα και δεν πρέπει\\
+να ερμηνευθεί ότι αντιπροσωπεύουν τις επίσημες θέσεις του Εθνικού Μετσόβιου Πολυτεχνείου.
+
+\newpage
+
+\section*{Περίληψη}
+Στην
+
+
+\newpage
+\mbox{}
+\newpage
+
+\section*{Abstract}
+in
+
+
+
+\newpage
+\mbox{}
+\newpage
+
+\section*{Ευχαριστίες}
+Θα ήθελα να ευχαριστήσουμε τον κύριο Πέτρο Στεφανέα για το ενδιαφέρον και την εμπιστοσύνη που
+μας έδειξε κατά τη διάρκεια πραγματοποίησης της εν λόγω εργασίας. Επίσης, θα θέλαμε να ευχαριστήσουμε
+τις οικογένειες μας γιατί χωρίς αυτές δεν θα μπορούσαμε να βρισκόμασταν στη θέση που βρισκόμαστε
+τώρα.
+
+
+\newpage
+\mbox{}
+\newpage
+
+
+\tableofcontents
+
+\newpage
+\listoffigures
+\addcontentsline{toc}{part}{List of Figures}
+\newpage
+\listoftables
+\addcontentsline{toc}{part}{List of Tables}
+
+\newpage
+\pagenumbering{arabic}
+\section{Εισαγωγή}
+
+\subsection{Κατηγορίες κατάτμησης εικόνας}
+
+
+
+\subsubsection{Σημασιολογική κατάτμηση εικόνας}
+
+
+\end{document}

@@ -1,0 +1,6 @@
+# Which files to ignore
+
+# Inside Report directory
+Report/*.aux
+Report/*.log
+Report/*.synctex.gz
