@@ -6,8 +6,13 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {part}{List of Figures}{xiv}{}%
-\contentsline {part}{List of Tables}{xv}{}%
-\contentsline {section}{\numberline {1}Εισαγωγή}{1}{}%
-\contentsline {subsection}{\numberline {1.1}Κατηγορίες κατάτμησης εικόνας}{1}{}%
-\contentsline {subsubsection}{\numberline {1.1.1}Σημασιολογική κατάτμηση εικόνας}{1}{}%
+\contentsline {part}{List of Figures}{xiii}{Doc-Start}%
+\contentsline {part}{List of Tables}{xiv}{Doc-Start}%
+\contentsline {section}{\numberline {1}Μαθηματικό υπόβαθρο}{1}{section.1}%
+\contentsline {section}{\numberline {2}Εισαγωγή}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Κατάτμηση εικόνας}{1}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Σημασιολογική κατάτμηση εικόνας}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Κατάτμηση παραδειγμάτων}{2}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Πανοπτική κατάτμηση εικόνας}{3}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Σύνολα δεδομένων}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Θεωρητικό υπόβαθρο}{3}{subsection.2.3}%

@@ -4,3 +4,6 @@
 Report/*.aux
 Report/*.log
 Report/*.synctex.gz
+Report/*.lof
+Report/*.lot
+Report/*.toc
