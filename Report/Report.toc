@@ -12,7 +12,11 @@
 \contentsline {section}{\numberline {2}Εισαγωγή}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Κατάτμηση εικόνας}{1}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Σημασιολογική κατάτμηση εικόνας}{2}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Κατάτμηση παραδειγμάτων}{2}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2}Κατάτμηση παραδειγμάτων}{3}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Πανοπτική κατάτμηση εικόνας}{3}{subsubsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.2}Σύνολα δεδομένων}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Θεωρητικό υπόβαθρο}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.2}Σύνολα δεδομένων για πανοπτική κατάτμηση εικόνας}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Σύνολο δεδομένων COCO}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Σύνολο δεδομένων ADE20K}{4}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Σύνολο δεδομένων Cityscapes}{4}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Μετρικές απόδοσης πανοπτικής κατάτμησης εικόνας}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Θεωρητικό υπόβαθρο}{4}{section.3}%
