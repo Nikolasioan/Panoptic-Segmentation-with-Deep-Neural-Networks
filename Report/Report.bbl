@@ -1,13 +1,170 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{ibm2023vision}
-{IBM}, ``What is computer vision?.''
-  \url{https://www.ibm.com/think/topics/computer-vision}, 2023.
-\newblock Accessed: 2025-05-12.
+\bibitem{Gao_2020}
+K.~Gao, G.~Mei, F.~Piccialli, S.~Cuomo, J.~Tu, and Z.~Huo, ``Julia language in
+  machine learning: Algorithms, applications, and open issues,'' {\em Computer
+  Science Review}, vol.~37, p.~100254, Aug. 2020.
 
-\bibitem{shelke2023cvreview}
-S.~Shelke, I.~Pathak, A.~Sangai, D.~Lunge, K.~Shahale, and H.~Vyawahare, ``A
-  review paper on computer vision,'' {\em International Journal of Advanced
-  Research in Science, Communication and Technology}, pp.~673--677, 03 2023.
+\bibitem{Esteva2021}
+A.~Esteva, K.~Chou, S.~Yeung, N.~Naik, A.~Madani, A.~Mottaghi, Y.~Liu,
+  E.~Topol, J.~Dean, and R.~Socher, ``Deep learning-enabled medical computer
+  vision,'' {\em npj Digital Medicine}, vol.~4, no.~1, p.~5, 2021.
+
+\bibitem{unknown1}
+X.~Dong and M.~Cappuccio, ``Applications of computer vision in autonomous
+  vehicles: Methods, challenges and future directions,'' 11 2023.
+
+\bibitem{article1}
+M.~T. Shahria, M.~S. Sunny, I.~Islam, J.~Ghommam, S.~Ahamed, and M.~Rahman, ``A
+  comprehensive review of vision-based robotic applications: Current state,
+  components, approaches, barriers, and potential solutions,'' {\em Robotics},
+  vol.~11, 12 2022.
+
+\bibitem{NIPS2012_c399862d}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
+  deep convolutional neural networks,'' in {\em Advances in Neural Information
+  Processing Systems} (F.~Pereira, C.~Burges, L.~Bottou, and K.~Weinberger,
+  eds.), vol.~25, Curran Associates, Inc., 2012.
+
+\bibitem{russakovsky2015imagenetlargescalevisual}
+O.~Russakovsky, J.~Deng, H.~Su, J.~Krause, S.~Satheesh, S.~Ma, Z.~Huang,
+  A.~Karpathy, A.~Khosla, M.~Bernstein, A.~C. Berg, and L.~Fei-Fei, ``Imagenet
+  large scale visual recognition challenge,'' 2015.
+
+\bibitem{article2}
+E.~Chris, J.~Kate, and A.~Juliet, ``The evolution of computer vision: From
+  pixels to perception,'' 12 2025.
+
+\bibitem{boesch2024computer}
+G.~Boesch, ``Computer vision tasks (comprehensive 2025 guide),'' October 2024.
+
+\bibitem{zhou2024comprehensive}
+L.~Zhou, G.~Wu, Y.~Zuo, X.~Chen, and H.~Hu, ``A comprehensive review of
+  vision-based 3d reconstruction methods,'' {\em Sensors}, vol.~24, p.~2314,
+  April 2024.
+
+\bibitem{DBLP:journals/corr/abs-2001-05566}
+S.~Minaee, Y.~Boykov, F.~Porikli, A.~Plaza, N.~Kehtarnavaz, and D.~Terzopoulos,
+  ``Image segmentation using deep learning: {A} survey,'' {\em CoRR},
+  vol.~abs/2001.05566, 2020.
+
+\bibitem{csurka2023semanticimagesegmentationdecades}
+G.~Csurka, R.~Volpi, and B.~Chidlovskii, ``Semantic image segmentation: Two
+  decades of research,'' 2023.
+
+\bibitem{DBLP:journals/corr/CordtsORREBFRS16}
+M.~Cordts, M.~Omran, S.~Ramos, T.~Rehfeld, M.~Enzweiler, R.~Benenson,
+  U.~Franke, S.~Roth, and B.~Schiele, ``The cityscapes dataset for semantic
+  urban scene understanding,'' {\em CoRR}, vol.~abs/1604.01685, 2016.
+
+\bibitem{Everingham2010}
+M.~Everingham, L.~V. Gool, C.~K.~I. Williams, J.~Winn, and A.~Zisserman, ``The
+  pascal visual object classes (voc) challenge,'' {\em International Journal of
+  Computer Vision}, vol.~88, no.~2, pp.~303--338, 2010.
+
+\bibitem{8100027}
+B.~Zhou, H.~Zhao, X.~Puig, S.~Fidler, A.~Barriuso, and A.~Torralba, ``Scene
+  parsing through ade20k dataset,'' in {\em 2017 IEEE Conference on Computer
+  Vision and Pattern Recognition (CVPR)}, pp.~5122--5130, 2017.
+
+\bibitem{Hafiz_2020}
+A.~M. Hafiz and G.~M. Bhat, ``A survey on instance segmentation: state of the
+  art,'' {\em International Journal of Multimedia Information Retrieval},
+  vol.~9, p.~171–189, July 2020.
+
+\bibitem{lin2015microsoftcococommonobjects}
+T.-Y. Lin, M.~Maire, S.~Belongie, L.~Bourdev, R.~Girshick, J.~Hays, P.~Perona,
+  D.~Ramanan, C.~L. Zitnick, and P.~Dollár, ``Microsoft coco: Common objects
+  in context,'' 2015.
+
+\bibitem{elharrouss2021panopticsegmentationreview}
+O.~Elharrouss, S.~Al-Maadeed, N.~Subramanian, N.~Ottakath, N.~Almaadeed, and
+  Y.~Himeur, ``Panoptic segmentation: A review,'' 2021.
+
+\bibitem{shah2023coco}
+D.~Shah, ``Coco dataset: All you need to know to get started,'' 2023.
+
+\bibitem{fan2021tao}
+Z.~Fan, Y.~Wang, Y.~Zhu, and J.~Zhao, ``Preparing state-of-the-art models for
+  classification and object detection with nvidia tao toolkit,'' February 2021.
+\newblock Accessed: 2025-06-24.
+
+\bibitem{cheng2022maskedattentionmasktransformeruniversal}
+B.~Cheng, I.~Misra, A.~G. Schwing, A.~Kirillov, and R.~Girdhar,
+  ``Masked-attention mask transformer for universal image segmentation,'' 2022.
+
+\bibitem{taghavi2024swinmtlsharedarchitecturesimultaneous}
+P.~Taghavi, R.~Langari, and G.~Pandey, ``Swinmtl: A shared architecture for
+  simultaneous depth estimation and semantic segmentation from monocular camera
+  images,'' 2024.
+
+\bibitem{6909514}
+R.~Mottaghi, X.~Chen, X.~Liu, N.-G. Cho, S.-W. Lee, S.~Fidler, R.~Urtasun, and
+  A.~Yuille, ``The role of context for object detection and semantic
+  segmentation in the wild,'' in {\em 2014 IEEE Conference on Computer Vision
+  and Pattern Recognition}, pp.~891--898, 2014.
+
+\bibitem{5539970}
+J.~Xiao, J.~Hays, K.~A. Ehinger, A.~Oliva, and A.~Torralba, ``Sun database:
+  Large-scale scene recognition from abbey to zoo,'' in {\em 2010 IEEE Computer
+  Society Conference on Computer Vision and Pattern Recognition},
+  pp.~3485--3492, 2010.
+
+\bibitem{zhou2018semanticunderstandingscenesade20k}
+B.~Zhou, H.~Zhao, X.~Puig, T.~Xiao, S.~Fidler, A.~Barriuso, and A.~Torralba,
+  ``Semantic understanding of scenes through the ade20k dataset,'' 2018.
+
+\bibitem{bhandari2025confusion}
+A.~Bhandari, ``Confusion matrix in machine learning,'' 2025.
+
+\bibitem{Kookna2022Segmentation}
+V.~Kookna, ``Semantic vs. instance vs. panoptic segmentation,'' 2022.
+
+\bibitem{Bex2021MulticlassMetrics}
+B.~T., ``Comprehensive guide to multiclass classification metrics,'' 2021.
+
+\bibitem{grandini2020metricsmulticlassclassificationoverview}
+M.~Grandini, E.~Bagli, and G.~Visani, ``Metrics for multi-class classification:
+  an overview,'' 2020.
+
+\bibitem{Kirillov_2019_CVPR}
+A.~Kirillov, K.~He, R.~Girshick, C.~Rother, and P.~Dollar, ``Panoptic
+  segmentation,'' in {\em Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition (CVPR)}, June 2019.
+
+\bibitem{shah2022map}
+D.~Shah, ``Mean average precision (map) explained: Everything you need to
+  know,'' 2022.
+
+\bibitem{zhang2019basicneuralunitsbrain}
+J.~Zhang, ``Basic neural units of the brain: Neurons, synapses and action
+  potential,'' 2019.
+
+\bibitem{Navlani2022Activation}
+A.~Navlani, ``Activation functions,'' 2022.
+
+\bibitem{nwankpa2018activationfunctionscomparisontrends}
+C.~Nwankpa, W.~Ijomah, A.~Gachagan, and S.~Marshall, ``Activation functions:
+  Comparison of trends in practice and research for deep learning,'' 2018.
+
+\bibitem{hendrycks2023gaussianerrorlinearunits}
+D.~Hendrycks and K.~Gimpel, ``Gaussian error linear units (gelus),'' 2023.
+
+\bibitem{codecademy_linear_activation_2023}
+S.~M. K, ``Linear activation function,'' 2023.
+
+\bibitem{baheti_activation_functions_2021}
+P.~Baheti, ``Activation functions in neural networks [12 types \& use cases],''
+  2021.
+
+\bibitem{rosenblatt1958perceptron}
+F.~Rosenblatt, ``The perceptron: A probabilistic model for information storage
+  and organization in the brain,'' {\em Psychological Review}, vol.~65, no.~6,
+  pp.~386--408, 1958.
+
+\bibitem{HORNIK1989359}
+K.~Hornik, M.~Stinchcombe, and H.~White, ``Multilayer feedforward networks are
+  universal approximators,'' {\em Neural Networks}, vol.~2, no.~5,
+  pp.~359--366, 1989.
 
 \end{thebibliography}

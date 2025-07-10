@@ -7,3 +7,6 @@ Report/*.synctex.gz
 Report/*.lof
 Report/*.lot
 Report/*.toc
+Report/*.bbl
+Report/*.blg
+Report/*.out

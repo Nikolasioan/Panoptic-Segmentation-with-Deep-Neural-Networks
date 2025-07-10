@@ -3,44 +3,68 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Report.aux
 The style file: ieeetr.bst
 Database file #1: references.bib
-You've used 2 entries,
+Warning--entry type for "unknown1" isn't style-file defined
+--line 43 of file references.bib
+Warning--entry type for "shah2023coco" isn't style-file defined
+--line 236 of file references.bib
+Warning--entry type for "bhandari2025confusion" isn't style-file defined
+--line 305 of file references.bib
+Warning--entry type for "Kookna2022Segmentation" isn't style-file defined
+--line 321 of file references.bib
+Warning--entry type for "Bex2021MulticlassMetrics" isn't style-file defined
+--line 328 of file references.bib
+Warning--entry type for "shah2022map" isn't style-file defined
+--line 345 of file references.bib
+Warning--entry type for "Navlani2022Activation" isn't style-file defined
+--line 363 of file references.bib
+Warning--entry type for "codecademy_linear_activation_2023" isn't style-file defined
+--line 370 of file references.bib
+Warning--entry type for "baheti_activation_functions_2021" isn't style-file defined
+--line 377 of file references.bib
+Repeated entry---line 406 of file references.bib
+ : @article{rosenblatt1958perceptron
+ :                                  ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in article2
+You've used 38 entries,
             1876 wiz_defined-function locations,
-            489 strings with 3851 characters,
-and the built_in function-call counts, 519 in all, are:
-= -- 47
-> -- 24
+            665 strings with 10490 characters,
+and the built_in function-call counts, 8225 in all, are:
+= -- 648
+> -- 541
 < -- 0
-+ -- 9
-- -- 7
-* -- 36
-:= -- 83
-add.period$ -- 3
-call.type$ -- 2
-change.case$ -- 2
++ -- 196
+- -- 158
+* -- 591
+:= -- 1250
+add.period$ -- 39
+call.type$ -- 38
+change.case$ -- 38
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 20
-empty$ -- 47
-format.name$ -- 7
-if$ -- 123
+cite$ -- 39
+duplicate$ -- 338
+empty$ -- 803
+format.name$ -- 158
+if$ -- 1955
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 1
-newline$ -- 10
-num.names$ -- 2
-pop$ -- 8
+int.to.str$ -- 38
+missing$ -- 16
+newline$ -- 118
+num.names$ -- 40
+pop$ -- 213
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 18
+skip$ -- 259
 stack$ -- 0
-substring$ -- 28
-swap$ -- 9
+substring$ -- 232
+swap$ -- 107
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 21
+warning$ -- 1
+while$ -- 57
+width$ -- 40
+write$ -- 311
+(There was 1 error message)

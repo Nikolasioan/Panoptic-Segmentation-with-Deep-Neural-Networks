@@ -6,7 +6,25 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Αυθεντική εικόνα}}{2}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Σημασιολογική κατάτμηση εικόνας}}{2}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Κατάτμηση παραδειγμάτων}}{3}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Πανοπτική κατάτμηση εικόνας}}{4}{figure.4}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Αυθεντική εικόνα}}{3}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Σημασιολογική κατάτμηση εικόνας}}{3}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Κατάτμηση παραδειγμάτων}}{4}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Πανοπτική κατάτμηση εικόνας}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Κατηγορίες αντικειμένων συνόλου δεδομένων COCO}}{6}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Δομή συνόλου δεδομένων COCO}}{7}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Αντικείμενα συνόλου δεδομένων Cityscapes}}{8}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Αντικείμενα συνόλου δεδομένων ADE20K}}{9}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Μορφή πίνακα σύγχυσης για δυαδική ταξινόμηση}}{10}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Παράδειγμα υπολογισμού συνόλων TP, FP και FN για την κατηγορία "person"}}{14}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Δομή νευρώνα}}{17}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Μοντέλο McCulloch και Pitts του νευρώνα}}{19}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Σχηματική αναπαράσταση του νευρώνα}}{20}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Γραφική μορφή βηματικής συνάρτησης -1/1}}{21}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Γραφική μορφή σιγμοειδής συνάρτησης}}{21}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Γραφική μορφή υπερβολικής εφαπτομένης}}{22}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Γραφική μορφή συνάρτησης ReLU}}{23}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Γραφική μορφή συνάρτησης GeLU}}{25}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Γραφική μορφή γραμμικής συνάρτησης}}{26}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Ταξινόμηση στον \(\mathbb {R}^2\) χρήση δικτύου Perceptron}}{27}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Ταξινόμηση στον \(\mathbb {R}^2\) χρήση MLP}}{27}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Γενική σχηματική μορφή δικτύου Perceptron πολλών στρωμάτων}}{28}{figure.22}%
