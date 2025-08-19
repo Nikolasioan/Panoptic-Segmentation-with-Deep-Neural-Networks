@@ -6,33 +6,80 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {part}{List of Figures}{xiii}{Doc-Start}%
-\contentsline {part}{List of Tables}{xiv}{Doc-Start}%
-\contentsline {section}{\numberline {1}Μαθηματικό υπόβαθρο}{1}{section.1}%
-\contentsline {section}{\numberline {2}Εισαγωγή}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Κατάτμηση εικόνας}{2}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Σημασιολογική κατάτμηση εικόνας}{2}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Κατάτμηση αντικειμένων}{3}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Πανοπτική κατάτμηση εικόνας}{4}{subsubsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.2}Σύνολα δεδομένων για πανοπτική κατάτμηση εικόνας}{5}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Σύνολο δεδομένων COCO}{5}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Σύνολο δεδομένων Cityscapes}{7}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Σύνολο δεδομένων ADE20K}{8}{subsubsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.3}Μετρικές απόδοσης πανοπτικής κατάτμησης εικόνας}{10}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Πίνακας σύγχυσης (Confusion matrix)}{10}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Intersection over Union (Intersection over Union - IoU)}{12}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Μέσος Όρος Ακρίβειας (Average Precision - AP)}{12}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Πανοπτική ποιότητα (Panoptic Quality - PQ)}{13}{subsubsection.2.3.4}%
-\contentsline {section}{\numberline {3}Θεωρητικό υπόβαθρο}{17}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Ο νευρώνας}{17}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Το μοντέλο McCulloch-Pitts}{18}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Εναλλακτικές συναρτήσεις ενεργοποίησης}{19}{subsubsection.3.2.1}%
-\contentsline {paragraph}{Βηματική συνάρτηση -1/1 (Step function -1/1)\\[0.5cm]}{20}{paragraph*.1}%
-\contentsline {paragraph}{Σιγμοειδής συνάρτηση (Sigmoid function)\\[0.5cm]}{20}{paragraph*.2}%
-\contentsline {paragraph}{Υπερβολική εφαπτομένη (Hyperbolic tangent)\\[0.5cm]}{22}{paragraph*.3}%
-\contentsline {paragraph}{Συνάρτηση ράμπας (ReLU)\\[0.5cm]}{22}{paragraph*.4}%
-\contentsline {paragraph}{Γραμμική συνάρτηση (Linear function)\\[0.5cm]}{25}{paragraph*.5}%
-\contentsline {subsection}{\numberline {3.3}Νευρωνικά δίκτυα πολλών στρωμάτων}{26}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Το δίκτυο MLP}{26}{subsubsection.3.3.1}%
-\contentsline {paragraph}{Ανάκληση}{28}{paragraph*.6}%
-\contentsline {subsubsection}{\numberline {3.3.2}Ο αλγόριθμος εκπαίδευσης Back-Propagation}{29}{subsubsection.3.3.2}%
+\contentsline {part}{List of Figures}{xv}{Doc-Start}%
+\contentsline {part}{List of Tables}{xvi}{Doc-Start}%
+\contentsline {section}{\numberline {1}Εισαγωγή}{1}{section.1}%
+\contentsline {section}{\numberline {2}Ορισμός και περιγραφή του προβλήματος}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Κατάτμηση εικόνας}{3}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Σημασιολογική κατάτμηση εικόνας}{3}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Κατάτμηση αντικειμένων}{4}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Πανοπτική κατάτμηση εικόνας}{5}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Συναφή προβλήματα ανάλυσης εικόνας}{6}{subsection.2.2}%
+\contentsline {paragraph}{Ταξινόμηση εικόνας \\ [0.5 cm]}{6}{paragraph*.1}%
+\contentsline {paragraph}{Ανίχνευση αντικειμένων \\ [0.5cm]}{7}{paragraph*.2}%
+\contentsline {paragraph}{Εκτίμηση βάθους\\ [0.5 cm]}{7}{paragraph*.3}%
+\contentsline {paragraph}{Εκτίμηση στάσης\\ [0.5 cm]}{7}{paragraph*.4}%
+\contentsline {paragraph}{Υπερ-ανάλυση εικόνας \\ [0.5 cm]}{8}{paragraph*.5}%
+\contentsline {paragraph}{Ανακατασκευή 3-διάστατης εικόνας\\[0.5cm]}{8}{paragraph*.6}%
+\contentsline {section}{\numberline {3}Θεωρητικό υπόβαθρο}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Ο νευρώνας}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Το μοντέλο McCulloch-Pitts}{10}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Εναλλακτικές συναρτήσεις ενεργοποίησης}{11}{subsubsection.3.2.1}%
+\contentsline {paragraph}{Βηματική συνάρτηση -1/1 (Step function -1/1)\\[0.5cm]}{12}{paragraph*.7}%
+\contentsline {paragraph}{Σιγμοειδής συνάρτηση (Sigmoid function)\\[0.5cm]}{12}{paragraph*.8}%
+\contentsline {paragraph}{Υπερβολική εφαπτομένη (Hyperbolic tangent)\\[0.5cm]}{14}{paragraph*.9}%
+\contentsline {paragraph}{Συνάρτηση ράμπας (ReLU)\\[0.5cm]}{14}{paragraph*.10}%
+\contentsline {paragraph}{Γραμμική συνάρτηση (Linear function)\\[0.5cm]}{17}{paragraph*.11}%
+\contentsline {subsection}{\numberline {3.3}Νευρωνικά δίκτυα πολλών στρωμάτων}{18}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Το δίκτυο MLP}{18}{subsubsection.3.3.1}%
+\contentsline {paragraph}{Ανάκληση}{20}{paragraph*.12}%
+\contentsline {subsubsection}{\numberline {3.3.2}Εκπαίδευση νευρωνικών δικτύων}{21}{subsubsection.3.3.2}%
+\contentsline {paragraph}{Συνάρτηση απώλειας διασταυρώμενης εντροπίας (Cross-Entropy Loss Function)\\ [0.5 cm]}{23}{paragraph*.13}%
+\contentsline {paragraph}{Συνάρτηση απώλειας ζαριών (Dice Loss Function)\\ [0.5 cm]}{23}{paragraph*.14}%
+\contentsline {paragraph}{Βελτιστοποίηση (Optimization)\\ [0.5 cm]}{24}{paragraph*.15}%
+\contentsline {paragraph}{Στοχαστική κατάβαση δυναμικού (Stochastic Gradient Descent)\\ [0.5 cm]}{24}{paragraph*.16}%
+\contentsline {paragraph}{Adaptive Moment Estimation with decoupled Weight decay - ADAMW\\[0.5 cm]}{24}{paragraph*.17}%
+\contentsline {paragraph}{Οπισθοδιάδοση (Backpropagation) \\ [0.5 cm]}{25}{paragraph*.18}%
+\contentsline {paragraph}{Ρύθμιση (Regularization)\\ [0.5cm]}{28}{paragraph*.19}%
+\contentsline {paragraph}{Ρύθμιση L1 (L1 Regularization) \\ [0.5 cm]}{29}{paragraph*.20}%
+\contentsline {paragraph}{Ρύθμιση L2 (L2 Regularization) \\ [0.5 cm]}{29}{paragraph*.21}%
+\contentsline {paragraph}{Απόρριψη (Dropout) \\ [0.5 cm]}{29}{paragraph*.22}%
+\contentsline {paragraph}{Μέγεθος Παρτίδας (Batch Size)\\ [0.5 cm]}{31}{paragraph*.23}%
+\contentsline {subsection}{\numberline {3.4}Συνελικτικά νευρωνικά δίκτυα}{32}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Συνέλιξη με βήμα}{34}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Στρώμα υποδειγματοληψίας}{35}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Επέκταση με μηδενικά (Zero-padding)}{36}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Κανονικοποίηση τιμών (Normalization)}{36}{subsubsection.3.4.4}%
+\contentsline {paragraph}{Κανονικοποίηση ανά παρτίδα (Batch Normalization) \\ [0.5cm]}{36}{paragraph*.24}%
+\contentsline {paragraph}{Κανονικοποίηση ανά ομάδα (Group Normalization) \\ [0.5cm]}{37}{paragraph*.25}%
+\contentsline {paragraph}{Kανονικοποίηση ανά παρτίδα και ομάδα (Batch Group Normalization)\\ [0.5cm]}{39}{paragraph*.26}%
+\contentsline {subsection}{\numberline {3.5}Μετασχμηματιστές (Transformers)}{40}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Αρχιτεκτονική}{40}{subsubsection.3.5.1}%
+\contentsline {paragraph}{Πλήρως συνδεδεμένο δίκτυο\\[0.5 cm]}{42}{paragraph*.27}%
+\contentsline {paragraph}{Αυτο-προσοχή (Self-Attention) \\ [0.5 cm]}{42}{paragraph*.28}%
+\contentsline {section}{\numberline {4}Σύνολα δεδομένων και μετρικές απόδοσης πανοπτικής \\ κατάτμησης εικόνας}{45}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Σύνολα δεδομένων πανοπτικής κατάτμησης εικόνας}{45}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Σύνολο δεδομένων COCO}{45}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Σύνολο δεδομένων Cityscapes}{47}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Σύνολο δεδομένων ADE20K}{48}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Μετρικές απόδοσης πανοπτικής κατάτμησης εικόνας}{49}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Πίνακας σύγχυσης (Confusion matrix)}{50}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Intersection over Union (Intersection over Union - IoU)}{51}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Μέσος Όρος Ακρίβειας (Average Precision - AP)}{52}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Πανοπτική ποιότητα (Panoptic Quality - PQ)}{53}{subsubsection.4.2.4}%
+\contentsline {section}{\numberline {5}Σχετική έρευνα}{57}{section.5}%
+\contentsline {subsection}{\numberline {5.1}State-of-the-art στο σύνολο δεδομένων COCO}{57}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Mask DINO}{57}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}kMaX-DeepLab}{57}{subsubsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.2}State-of-the-art στο σύνολο δεδομένων Cityscapes}{58}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Scaling Wide Residual Networks}{58}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Naive-Student}{60}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}State-of-the-art στο σύνολο δεδομένων ADE20K}{60}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}OneFormer}{60}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}OpenSeeD}{61}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4}Θεμελιώδεις έρευνες στην πανοπτική κατάτμηση εικόνας}{62}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Panoptic-DeepLab}{62}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}UPSNet}{63}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Max-DeepLab}{64}{subsubsection.5.4.3}%
+\contentsline {section}{\numberline {6}Συμβολή της εργασίας}{66}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Visual Attention Network - VAN}{66}{subsection.6.1}%

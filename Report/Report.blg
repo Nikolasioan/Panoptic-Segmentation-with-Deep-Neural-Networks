@@ -25,46 +25,54 @@ Repeated entry---line 406 of file references.bib
  : @article{rosenblatt1958perceptron
  :                                  ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 588 of file references.bib
+ : @misc{cheng2022maskedattentionmasktransformeruniversal
+ :                                                       ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "onix_image_classification_2024" isn't style-file defined
+--line 657 of file references.bib
 Warning--empty journal in article2
-You've used 38 entries,
+Warning--empty journal in article11
+Warning--empty journal in article3
+You've used 89 entries,
             1876 wiz_defined-function locations,
-            665 strings with 10490 characters,
-and the built_in function-call counts, 8225 in all, are:
-= -- 648
-> -- 541
+            840 strings with 19035 characters,
+and the built_in function-call counts, 17938 in all, are:
+= -- 1336
+> -- 1328
 < -- 0
-+ -- 196
-- -- 158
-* -- 591
-:= -- 1250
-add.period$ -- 39
-call.type$ -- 38
-change.case$ -- 38
++ -- 477
+- -- 388
+* -- 1291
+:= -- 2792
+add.period$ -- 91
+call.type$ -- 89
+change.case$ -- 89
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 338
-empty$ -- 803
-format.name$ -- 158
-if$ -- 1955
+cite$ -- 92
+duplicate$ -- 633
+empty$ -- 1772
+format.name$ -- 388
+if$ -- 4218
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 16
-newline$ -- 118
-num.names$ -- 40
-pop$ -- 213
+int.to.str$ -- 89
+missing$ -- 27
+newline$ -- 272
+num.names$ -- 91
+pop$ -- 528
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 259
+skip$ -- 506
 stack$ -- 0
-substring$ -- 232
-swap$ -- 107
+substring$ -- 379
+swap$ -- 153
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 57
-width$ -- 40
-write$ -- 311
-(There was 1 error message)
+warning$ -- 3
+while$ -- 121
+width$ -- 91
+write$ -- 693
+(There were 2 error messages)

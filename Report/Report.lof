@@ -6,25 +6,42 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Αυθεντική εικόνα}}{3}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Σημασιολογική κατάτμηση εικόνας}}{3}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Κατάτμηση παραδειγμάτων}}{4}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Πανοπτική κατάτμηση εικόνας}}{5}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Κατηγορίες αντικειμένων συνόλου δεδομένων COCO}}{6}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Δομή συνόλου δεδομένων COCO}}{7}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Αντικείμενα συνόλου δεδομένων Cityscapes}}{8}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Αντικείμενα συνόλου δεδομένων ADE20K}}{9}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Μορφή πίνακα σύγχυσης για δυαδική ταξινόμηση}}{10}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Παράδειγμα υπολογισμού συνόλων TP, FP και FN για την κατηγορία "person"}}{14}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Δομή νευρώνα}}{17}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Μοντέλο McCulloch και Pitts του νευρώνα}}{19}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Σχηματική αναπαράσταση του νευρώνα}}{20}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Γραφική μορφή βηματικής συνάρτησης -1/1}}{21}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Γραφική μορφή σιγμοειδής συνάρτησης}}{21}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Γραφική μορφή υπερβολικής εφαπτομένης}}{22}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Γραφική μορφή συνάρτησης ReLU}}{23}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Γραφική μορφή συνάρτησης GeLU}}{25}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Γραφική μορφή γραμμικής συνάρτησης}}{26}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Ταξινόμηση στον \(\mathbb {R}^2\) χρήση δικτύου Perceptron}}{27}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Ταξινόμηση στον \(\mathbb {R}^2\) χρήση MLP}}{27}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Γενική σχηματική μορφή δικτύου Perceptron πολλών στρωμάτων}}{28}{figure.22}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Αυθεντική εικόνα}}{4}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Σημασιολογική κατάτμηση εικόνας}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Κατάτμηση αντικειμένων}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Πανοπτική κατάτμηση εικόνας}}{6}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Δομή νευρώνα}}{9}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Μοντέλο McCulloch και Pitts του νευρώνα}}{11}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Σχηματική αναπαράσταση του νευρώνα}}{12}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Γραφική μορφή βηματικής συνάρτησης -1/1}}{13}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Γραφική μορφή σιγμοειδής συνάρτησης}}{13}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Γραφική μορφή υπερβολικής εφαπτομένης}}{14}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Γραφική μορφή συνάρτησης ReLU}}{15}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Γραφική μορφή συνάρτησης GeLU}}{17}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Γραφική μορφή γραμμικής συνάρτησης}}{18}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Ταξινόμηση στον \(\mathbb {R}^2\) χρήση δικτύου Perceptron}}{19}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Ταξινόμηση στον \(\mathbb {R}^2\) χρήση MLP}}{19}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Γενική σχηματική μορφή δικτύου Perceptron πολλών στρωμάτων}}{20}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Απεικόνιση της τεχνικής της απόρριψης: (a) Κατά την εκπαίδευση, κάθε μονάδα διατηρείται με πιθανότητα $p$. (b) Κατά τη δοκιμή, όλες οι μονάδες είναι ενεργές και τα βάρη κλιμακώνονται κατά $p$.}}{31}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Η αρχιτεκτονική ενός τυπικού συνελικτικού νευρωνικού δικτύου}}{32}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Αναπαράσταση υπολογισμού νευρώνα \(y_{ij}^{k}\) του k-οστού χάρτη χαρακτηριστικών και στρώματος L}}{33}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Εξαγωγή χαρακτηριστικών}}{34}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Παράδειγμα συνέλιξης με βήμα \(s_i\) x \(s_j\) = 2 x 2 και μάσκα διαστάσεων 3 x 3}}{34}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Αρχιτεκτονική μετασχηματιστή}}{41}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Κατηγορίες αντικειμένων συνόλου δεδομένων COCO}}{46}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Δομή συνόλου δεδομένων COCO}}{47}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Αντικείμενα συνόλου δεδομένων Cityscapes}}{48}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Αντικείμενα συνόλου δεδομένων ADE20K}}{49}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Μορφή πίνακα σύγχυσης για δυαδική ταξινόμηση}}{50}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Παράδειγμα υπολογισμού συνόλων TP, FP και FN για την κατηγορία "person"}}{54}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Αρχιτεκτονική μοντέλου Mask DINO}}{57}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Μετα-αρχιτεκτονική μοντέλου kMaX-DeepLab}}{58}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Αρχιτεκτονικές τεχνικών (a) Squeeze-and-Excitation, (b) Swithcable Atrous Convolution}}{60}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Αρχιτεκτονική διαδικασία εκπαίδευσης Naive-Student}}{61}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Αρχιτεκτονική OneFormer}}{61}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Αρχιτεκτονική OpenSeed}}{62}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Αρχιτεκτονική μοντέλου Panoptic-DeepLab}}{63}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Αρχιτεκτονική μοντέλου UPSNet}}{64}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Αρχιτεκτονική μοντέλου Max-DeepLab}}{65}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Αποσύνθεση συνελικτικών πράξεων LKA για K = 7 και d = 2}}{67}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Αρχιτεκτονική ενός σταδίου του VAN}}{68}{figure.39}%

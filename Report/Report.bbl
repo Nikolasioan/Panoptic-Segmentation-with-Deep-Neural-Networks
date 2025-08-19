@@ -81,6 +81,168 @@ T.-Y. Lin, M.~Maire, S.~Belongie, L.~Bourdev, R.~Girshick, J.~Hays, P.~Perona,
 O.~Elharrouss, S.~Al-Maadeed, N.~Subramanian, N.~Ottakath, N.~Almaadeed, and
   Y.~Himeur, ``Panoptic segmentation: A review,'' 2021.
 
+\bibitem{onix_image_classification_2024}
+S.~Kholin and A.~Bitkina, ``Image classification: 6 industries \& 26 use cases
+  you can try,'' 2024.
+
+\bibitem{article10}
+A.~Singh and P.~Singh, ``Image classification: A survey,'' {\em Journal of
+  Informatics Electrical and Electronics Engineering (JIEEE)}, vol.~1,
+  pp.~1--9, 11 2020.
+
+\bibitem{Rainio2024}
+O.~Rainio, J.~Teuho, and R.~Klén, ``Evaluation metrics and statistical tests
+  for machine learning,'' {\em Scientific Reports}, 2024.
+
+\bibitem{zou2023objectdetection20years}
+Z.~Zou, K.~Chen, Z.~Shi, Y.~Guo, and J.~Ye, ``Object detection in 20 years: A
+  survey,'' 2023.
+
+\bibitem{rohan2025systematicliteraturereviewdeep}
+A.~Rohan, M.~J. Hasan, and A.~Petrovski, ``A systematic literature review on
+  deep learning-based depth estimation in computer vision,'' 2025.
+
+\bibitem{Geiger2013IJRR}
+A.~Geiger, P.~Lenz, C.~Stiller, and R.~Urtasun, ``Vision meets robotics: The
+  {KITTI} dataset,'' {\em The International Journal of Robotics Research},
+  vol.~32, no.~11, pp.~1231--1237, 2013.
+
+\bibitem{zheng2023deeplearningbasedhumanpose}
+C.~Zheng, W.~Wu, C.~Chen, T.~Yang, S.~Zhu, J.~Shen, N.~Kehtarnavaz, and
+  M.~Shah, ``Deep learning-based human pose estimation: A survey,'' 2023.
+
+\bibitem{mehta2018singleshotmultiperson3dpose}
+D.~Mehta, O.~Sotnychenko, F.~Mueller, W.~Xu, S.~Sridhar, G.~Pons-Moll, and
+  C.~Theobalt, ``Single-shot multi-person 3d pose estimation from monocular
+  rgb,'' 2018.
+
+\bibitem{anwar2020deepjourneysuperresolutionsurvey}
+S.~Anwar, S.~Khan, and N.~Barnes, ``A deep journey into super-resolution: A
+  survey,'' 2020.
+
+\bibitem{article11}
+M.~Bevilacqua, A.~Roumy, C.~Guillemot, and M.-L. Alberi-Morel, ``Low-complexity
+  single image super-resolution based on nonnegative neighbor embedding,'' 09
+  2012.
+
+\bibitem{7299156}
+J.-B. Huang, A.~Singh, and N.~Ahuja, ``Single image super-resolution from
+  transformed self-exemplars,'' in {\em 2015 IEEE Conference on Computer Vision
+  and Pattern Recognition (CVPR)}, pp.~5197--5206, 2015.
+
+\bibitem{s24072314}
+L.~Zhou, G.~Wu, Y.~Zuo, X.~Chen, and H.~Hu, ``A comprehensive review of
+  vision-based 3d reconstruction methods,'' {\em Sensors}, vol.~24, no.~7,
+  2024.
+
+\bibitem{gählert2020cityscapes3ddatasetbenchmark}
+N.~Gählert, N.~Jourdan, M.~Cordts, U.~Franke, and J.~Denzler, ``Cityscapes 3d:
+  Dataset and benchmark for 9 dof vehicle detection,'' 2020.
+
+\bibitem{zhang2019basicneuralunitsbrain}
+J.~Zhang, ``Basic neural units of the brain: Neurons, synapses and action
+  potential,'' 2019.
+
+\bibitem{Navlani2022Activation}
+A.~Navlani, ``Activation functions,'' 2022.
+
+\bibitem{nwankpa2018activationfunctionscomparisontrends}
+C.~Nwankpa, W.~Ijomah, A.~Gachagan, and S.~Marshall, ``Activation functions:
+  Comparison of trends in practice and research for deep learning,'' 2018.
+
+\bibitem{hendrycks2023gaussianerrorlinearunits}
+D.~Hendrycks and K.~Gimpel, ``Gaussian error linear units (gelus),'' 2023.
+
+\bibitem{codecademy_linear_activation_2023}
+S.~M. K, ``Linear activation function,'' 2023.
+
+\bibitem{baheti_activation_functions_2021}
+P.~Baheti, ``Activation functions in neural networks [12 types \& use cases],''
+  2021.
+
+\bibitem{rosenblatt1958perceptron}
+F.~Rosenblatt, ``The perceptron: A probabilistic model for information storage
+  and organization in the brain,'' {\em Psychological Review}, vol.~65, no.~6,
+  pp.~386--408, 1958.
+
+\bibitem{HORNIK1989359}
+K.~Hornik, M.~Stinchcombe, and H.~White, ``Multilayer feedforward networks are
+  universal approximators,'' {\em Neural Networks}, vol.~2, no.~5,
+  pp.~359--366, 1989.
+
+\bibitem{ciampiconi2024surveytaxonomylossfunctions}
+L.~Ciampiconi, A.~Elwood, M.~Leonardi, A.~Mohamed, and A.~Rozza, ``A survey and
+  taxonomy of loss functions in machine learning,'' 2024.
+
+\bibitem{hughes2024crossentropy}
+C.~Hughes, ``A brief overview of cross entropy loss,'' 2024.
+
+\bibitem{loshchilov2019decoupledweightdecayregularization}
+I.~Loshchilov and F.~Hutter, ``Decoupled weight decay regularization,'' 2019.
+
+\bibitem{kingma2017adammethodstochasticoptimization}
+D.~P. Kingma and J.~Ba, ``Adam: A method for stochastic optimization,'' 2017.
+
+\bibitem{bishop2006pattern}
+C.~M. Bishop, {\em Pattern Recognition and Machine Learning}.
+\newblock Springer, 2006.
+
+\bibitem{higham2018deeplearningintroductionapplied}
+C.~F. Higham and D.~J. Higham, ``Deep learning: An introduction for applied
+  mathematicians,'' 2018.
+
+\bibitem{kukačka2017regularizationdeeplearningtaxonomy}
+J.~Kukačka, V.~Golkov, and D.~Cremers, ``Regularization for deep learning: A
+  taxonomy,'' 2017.
+
+\bibitem{schmidt2009l1}
+M.~Schmidt, G.~Fung, and R.~Rosaless, ``Optimization methods for
+  $\ell_1$-regularization,'' tech. rep., University of British Columbia, 2009.
+
+\bibitem{lewkowycz2021trainingdynamicsdeepnetworks}
+A.~Lewkowycz and G.~Gur-Ari, ``On the training dynamics of deep networks with
+  $l_2$ regularization,'' 2021.
+
+\bibitem{JMLR:v15:srivastava14a}
+N.~Srivastava, G.~Hinton, A.~Krizhevsky, I.~Sutskever, and R.~Salakhutdinov,
+  ``Dropout: A simple way to prevent neural networks from overfitting,'' {\em
+  Journal of Machine Learning Research}, vol.~15, no.~56, pp.~1929--1958, 2014.
+
+\bibitem{brownlee2018difference}
+J.~Brownlee, ``What is the difference between a batch and an epoch in a neural
+  network,'' {\em Machine learning mastery}, vol.~20, no.~1, pp.~1--15, 2018.
+
+\bibitem{article3}
+F.~Sarikaya, ``Batch size selection in deep learning: A comprehensive analysis
+  of training dynamics and performance optimization,'' 11 2024.
+
+\bibitem{han2023deepconvolutionalneuralnetworks}
+Z.~Han, B.~Liu, S.-B. Lin, and D.-X. Zhou, ``Deep convolutional neural networks
+  with zero-padding: Feature extraction and learning,'' 2023.
+
+\bibitem{sun2020newinterpretationsnormalizationmethods}
+J.~Sun, X.~Cao, H.~Liang, W.~Huang, Z.~Chen, and Z.~Li, ``New interpretations
+  of normalization methods in deep learning,'' 2020.
+
+\bibitem{ioffe2015batchnormalizationacceleratingdeep}
+S.~Ioffe and C.~Szegedy, ``Batch normalization: Accelerating deep network
+  training by reducing internal covariate shift,'' 2015.
+
+\bibitem{lian2018revisitbatchnormalizationnew}
+X.~Lian and J.~Liu, ``Revisit batch normalization: New understanding from an
+  optimization view and a refinement via composition optimization,'' 2018.
+
+\bibitem{wu2018groupnormalization}
+Y.~Wu and K.~He, ``Group normalization,'' 2018.
+
+\bibitem{zhou2020batchgroupnormalization}
+X.-Y. Zhou, J.~Sun, N.~Ye, X.~Lan, Q.~Luo, B.-L. Lai, P.~Esperanca, G.-Z. Yang,
+  and Z.~Li, ``Batch group normalization,'' 2020.
+
+\bibitem{vaswani2023attentionneed}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
+  L.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' 2023.
+
 \bibitem{shah2023coco}
 D.~Shah, ``Coco dataset: All you need to know to get started,'' 2023.
 
@@ -136,35 +298,83 @@ A.~Kirillov, K.~He, R.~Girshick, C.~Rother, and P.~Dollar, ``Panoptic
 D.~Shah, ``Mean average precision (map) explained: Everything you need to
   know,'' 2022.
 
-\bibitem{zhang2019basicneuralunitsbrain}
-J.~Zhang, ``Basic neural units of the brain: Neurons, synapses and action
-  potential,'' 2019.
+\bibitem{li2022maskdinounifiedtransformerbased}
+F.~Li, H.~Zhang, H.~xu, S.~Liu, L.~Zhang, L.~M. Ni, and H.-Y. Shum, ``Mask
+  dino: Towards a unified transformer-based framework for object detection and
+  segmentation,'' 2022.
 
-\bibitem{Navlani2022Activation}
-A.~Navlani, ``Activation functions,'' 2022.
+\bibitem{zhang2022dinodetrimproveddenoising}
+H.~Zhang, F.~Li, S.~Liu, L.~Zhang, H.~Su, J.~Zhu, L.~M. Ni, and H.-Y. Shum,
+  ``Dino: Detr with improved denoising anchor boxes for end-to-end object
+  detection,'' 2022.
 
-\bibitem{nwankpa2018activationfunctionscomparisontrends}
-C.~Nwankpa, W.~Ijomah, A.~Gachagan, and S.~Marshall, ``Activation functions:
-  Comparison of trends in practice and research for deep learning,'' 2018.
+\bibitem{liu2021swintransformerhierarchicalvision}
+Z.~Liu, Y.~Lin, Y.~Cao, H.~Hu, Y.~Wei, Z.~Zhang, S.~Lin, and B.~Guo, ``Swin
+  transformer: Hierarchical vision transformer using shifted windows,'' 2021.
 
-\bibitem{hendrycks2023gaussianerrorlinearunits}
-D.~Hendrycks and K.~Gimpel, ``Gaussian error linear units (gelus),'' 2023.
+\bibitem{yu2023kmaxdeeplabkmeansmasktransformer}
+Q.~Yu, H.~Wang, S.~Qiao, M.~Collins, Y.~Zhu, H.~Adam, A.~Yuille, and L.-C.
+  Chen, ``kmax-deeplab: k-means mask transformer,'' 2023.
 
-\bibitem{codecademy_linear_activation_2023}
-S.~M. K, ``Linear activation function,'' 2023.
+\bibitem{liu2022convnet2020s}
+Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet
+  for the 2020s,'' 2022.
 
-\bibitem{baheti_activation_functions_2021}
-P.~Baheti, ``Activation functions in neural networks [12 types \& use cases],''
-  2021.
+\bibitem{chen2021scalingwideresidualnetworks}
+L.-C. Chen, H.~Wang, and S.~Qiao, ``Scaling wide residual networks for panoptic
+  segmentation,'' 2021.
 
-\bibitem{rosenblatt1958perceptron}
-F.~Rosenblatt, ``The perceptron: A probabilistic model for information storage
-  and organization in the brain,'' {\em Psychological Review}, vol.~65, no.~6,
-  pp.~386--408, 1958.
+\bibitem{zagoruyko2017wideresidualnetworks}
+S.~Zagoruyko and N.~Komodakis, ``Wide residual networks,'' 2017.
 
-\bibitem{HORNIK1989359}
-K.~Hornik, M.~Stinchcombe, and H.~White, ``Multilayer feedforward networks are
-  universal approximators,'' {\em Neural Networks}, vol.~2, no.~5,
-  pp.~359--366, 1989.
+\bibitem{he2015deepresiduallearningimage}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' 2015.
+
+\bibitem{cheng2020panopticdeeplabsimplestrongfast}
+B.~Cheng, M.~D. Collins, Y.~Zhu, T.~Liu, T.~S. Huang, H.~Adam, and L.-C. Chen,
+  ``Panoptic-deeplab: A simple, strong, and fast baseline for bottom-up
+  panoptic segmentation,'' 2020.
+
+\bibitem{chen2020naivestudentleveragingsemisupervisedlearning}
+L.-C. Chen, R.~G. Lopes, B.~Cheng, M.~D. Collins, E.~D. Cubuk, B.~Zoph,
+  H.~Adam, and J.~Shlens, ``Naive-student: Leveraging semi-supervised learning
+  in video sequences for urban scene segmentation,'' 2020.
+
+\bibitem{chollet2017xceptiondeeplearningdepthwise}
+F.~Chollet, ``Xception: Deep learning with depthwise separable convolutions,''
+  2017.
+
+\bibitem{jain2022oneformertransformerruleuniversal}
+J.~Jain, J.~Li, M.~Chiu, A.~Hassani, N.~Orlov, and H.~Shi, ``Oneformer: One
+  transformer to rule universal image segmentation,'' 2022.
+
+\bibitem{wang2023internimageexploringlargescalevision}
+W.~Wang, J.~Dai, Z.~Chen, Z.~Huang, Z.~Li, X.~Zhu, X.~Hu, T.~Lu, L.~Lu, H.~Li,
+  X.~Wang, and Y.~Qiao, ``Internimage: Exploring large-scale vision foundation
+  models with deformable convolutions,'' 2023.
+
+\bibitem{zhang2023simpleframeworkopenvocabularysegmentation}
+H.~Zhang, F.~Li, X.~Zou, S.~Liu, C.~Li, J.~Gao, J.~Yang, and L.~Zhang, ``A
+  simple framework for open-vocabulary segmentation and detection,'' 2023.
+
+\bibitem{xiong2019upsnetunifiedpanopticsegmentation}
+Y.~Xiong, R.~Liao, H.~Zhao, R.~Hu, M.~Bai, E.~Yumer, and R.~Urtasun, ``Upsnet:
+  A unified panoptic segmentation network,'' 2019.
+
+\bibitem{he2018maskrcnn}
+K.~He, G.~Gkioxari, P.~Dollár, and R.~Girshick, ``Mask r-cnn,'' 2018.
+
+\bibitem{lin2017featurepyramidnetworksobject}
+T.-Y. Lin, P.~Dollár, R.~Girshick, K.~He, B.~Hariharan, and S.~Belongie,
+  ``Feature pyramid networks for object detection,'' 2017.
+
+\bibitem{wang2021maxdeeplabendtoendpanopticsegmentation}
+H.~Wang, Y.~Zhu, H.~Adam, A.~Yuille, and L.-C. Chen, ``Max-deeplab: End-to-end
+  panoptic segmentation with mask transformers,'' 2021.
+
+\bibitem{guo2022visualattentionnetwork}
+M.-H. Guo, C.-Z. Lu, Z.-N. Liu, M.-M. Cheng, and S.-M. Hu, ``Visual attention
+  network,'' 2022.
 
 \end{thebibliography}
