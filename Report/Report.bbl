@@ -143,6 +143,11 @@ N.~Gählert, N.~Jourdan, M.~Cordts, U.~Franke, and J.~Denzler, ``Cityscapes 3d:
 J.~Zhang, ``Basic neural units of the brain: Neurons, synapses and action
   potential,'' 2019.
 
+\bibitem{BotsisDiamantaras2019}
+�.~Μπότσης and �.~Διαμαντάρας, {\em Μηχανική
+  μάθηση}.
+\newblock Εκδόσεις Κλειδάριθμος.
+
 \bibitem{Navlani2022Activation}
 A.~Navlani, ``Activation functions,'' 2022.
 
@@ -242,6 +247,10 @@ X.-Y. Zhou, J.~Sun, N.~Ye, X.~Lan, Q.~Luo, B.-L. Lai, P.~Esperanca, G.-Z. Yang,
 \bibitem{vaswani2023attentionneed}
 A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
   L.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' 2023.
+
+\bibitem{ELMAN1990179}
+J.~L. Elman, ``Finding structure in time,'' {\em Cognitive Science}, vol.~14,
+  no.~2, pp.~179--211, 1990.
 
 \bibitem{shah2023coco}
 D.~Shah, ``Coco dataset: All you need to know to get started,'' 2023.
