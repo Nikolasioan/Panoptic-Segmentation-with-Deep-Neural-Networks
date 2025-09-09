@@ -37,45 +37,45 @@ Warning--empty journal in article2
 Warning--empty journal in article11
 Warning--empty year in BotsisDiamantaras2019
 Warning--empty journal in article3
-You've used 91 entries,
+You've used 92 entries,
             1876 wiz_defined-function locations,
-            853 strings with 19327 characters,
-and the built_in function-call counts, 18407 in all, are:
-= -- 1384
-> -- 1340
+            855 strings with 19404 characters,
+and the built_in function-call counts, 18328 in all, are:
+= -- 1369
+> -- 1351
 < -- 0
-+ -- 482
-- -- 391
-* -- 1320
-:= -- 2854
-add.period$ -- 94
-call.type$ -- 91
-change.case$ -- 90
++ -- 486
+- -- 394
+* -- 1315
+:= -- 2855
+add.period$ -- 95
+call.type$ -- 92
+change.case$ -- 91
 chr.to.int$ -- 0
-cite$ -- 95
-duplicate$ -- 659
-empty$ -- 1822
-format.name$ -- 391
-if$ -- 4338
+cite$ -- 96
+duplicate$ -- 644
+empty$ -- 1818
+format.name$ -- 394
+if$ -- 4313
 int.to.chr$ -- 0
-int.to.str$ -- 91
-missing$ -- 30
-newline$ -- 279
-num.names$ -- 93
-pop$ -- 536
+int.to.str$ -- 92
+missing$ -- 29
+newline$ -- 282
+num.names$ -- 94
+pop$ -- 542
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 522
+skip$ -- 512
 stack$ -- 0
-substring$ -- 407
-swap$ -- 163
+substring$ -- 371
+swap$ -- 152
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 125
-width$ -- 93
-write$ -- 712
+while$ -- 124
+width$ -- 94
+write$ -- 718
 (There were 2 error messages)

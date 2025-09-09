@@ -94,6 +94,11 @@ A.~Singh and P.~Singh, ``Image classification: A survey,'' {\em Journal of
 O.~Rainio, J.~Teuho, and R.~Klén, ``Evaluation metrics and statistical tests
   for machine learning,'' {\em Scientific Reports}, 2024.
 
+\bibitem{5206848}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei, ``Imagenet: A
+  large-scale hierarchical image database,'' in {\em 2009 IEEE Conference on
+  Computer Vision and Pattern Recognition}, pp.~248--255, 2009.
+
 \bibitem{zou2023objectdetection20years}
 Z.~Zou, K.~Chen, Z.~Shi, Y.~Guo, and J.~Ye, ``Object detection in 20 years: A
   survey,'' 2023.
@@ -269,18 +274,6 @@ P.~Taghavi, R.~Langari, and G.~Pandey, ``Swinmtl: A shared architecture for
   simultaneous depth estimation and semantic segmentation from monocular camera
   images,'' 2024.
 
-\bibitem{6909514}
-R.~Mottaghi, X.~Chen, X.~Liu, N.-G. Cho, S.-W. Lee, S.~Fidler, R.~Urtasun, and
-  A.~Yuille, ``The role of context for object detection and semantic
-  segmentation in the wild,'' in {\em 2014 IEEE Conference on Computer Vision
-  and Pattern Recognition}, pp.~891--898, 2014.
-
-\bibitem{5539970}
-J.~Xiao, J.~Hays, K.~A. Ehinger, A.~Oliva, and A.~Torralba, ``Sun database:
-  Large-scale scene recognition from abbey to zoo,'' in {\em 2010 IEEE Computer
-  Society Conference on Computer Vision and Pattern Recognition},
-  pp.~3485--3492, 2010.
-
 \bibitem{zhou2018semanticunderstandingscenesade20k}
 B.~Zhou, H.~Zhao, X.~Puig, T.~Xiao, S.~Fidler, A.~Barriuso, and A.~Torralba,
   ``Semantic understanding of scenes through the ade20k dataset,'' 2018.
@@ -336,10 +329,6 @@ L.-C. Chen, H.~Wang, and S.~Qiao, ``Scaling wide residual networks for panoptic
 \bibitem{zagoruyko2017wideresidualnetworks}
 S.~Zagoruyko and N.~Komodakis, ``Wide residual networks,'' 2017.
 
-\bibitem{he2015deepresiduallearningimage}
-K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
-  recognition,'' 2015.
-
 \bibitem{cheng2020panopticdeeplabsimplestrongfast}
 B.~Cheng, M.~D. Collins, Y.~Zhu, T.~Liu, T.~S. Huang, H.~Adam, and L.-C. Chen,
   ``Panoptic-deeplab: A simple, strong, and fast baseline for bottom-up
@@ -374,6 +363,10 @@ Y.~Xiong, R.~Liao, H.~Zhao, R.~Hu, M.~Bai, E.~Yumer, and R.~Urtasun, ``Upsnet:
 \bibitem{he2018maskrcnn}
 K.~He, G.~Gkioxari, P.~Dollár, and R.~Girshick, ``Mask r-cnn,'' 2018.
 
+\bibitem{he2015deepresiduallearningimage}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' 2015.
+
 \bibitem{lin2017featurepyramidnetworksobject}
 T.-Y. Lin, P.~Dollár, R.~Girshick, K.~He, B.~Hariharan, and S.~Belongie,
   ``Feature pyramid networks for object detection,'' 2017.
@@ -385,5 +378,14 @@ H.~Wang, Y.~Zhu, H.~Adam, A.~Yuille, and L.-C. Chen, ``Max-deeplab: End-to-end
 \bibitem{guo2022visualattentionnetwork}
 M.-H. Guo, C.-Z. Lu, Z.-N. Liu, M.-M. Cheng, and S.-M. Hu, ``Visual attention
   network,'' 2022.
+
+\bibitem{wu2019detectron2}
+Y.~Wu, A.~Kirillov, F.~Massa, W.-Y. Lo, and R.~Girshick, ``Detectron2.''
+  \url{https://github.com/facebookresearch/detectron2}, 2019.
+
+\bibitem{chen2017deeplabsemanticimagesegmentation}
+L.-C. Chen, G.~Papandreou, I.~Kokkinos, K.~Murphy, and A.~L. Yuille, ``Deeplab:
+  Semantic image segmentation with deep convolutional nets, atrous convolution,
+  and fully connected crfs,'' 2017.
 
 \end{thebibliography}
