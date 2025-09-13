@@ -40,10 +40,12 @@
 \contentsline {figure}{\numberline {4.4.1}{\ignorespaces Αρχιτεκτονική μοντέλου Panoptic-DeepLab}}{64}{figure.caption.62}%
 \contentsline {figure}{\numberline {4.4.2}{\ignorespaces Αρχιτεκτονική μοντέλου UPSNet}}{65}{figure.caption.63}%
 \contentsline {figure}{\numberline {4.4.3}{\ignorespaces Αρχιτεκτονική μοντέλου Max-DeepLab}}{66}{figure.caption.64}%
-\contentsline {figure}{\numberline {5.1.1}{\ignorespaces Αποσύνθεση συνέλιξης μεγάλου πυρήνα για \(K\) = 7 και \(d\) = 2.}}{68}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.1.1}{\ignorespaces Αποσύνθεση συνέλιξης μεγάλου πυρήνα για \(K =\) 7 και \(d =\) 2.}}{68}{figure.caption.65}%
 \contentsline {figure}{\numberline {5.1.2}{\ignorespaces Αρχιτεκτονική ενός σταδίου του VAN}}{69}{figure.caption.66}%
 \contentsline {figure}{\numberline {5.2.1}{\ignorespaces Αρχιτεκτονική ενός σταδίου του VANmb}}{70}{figure.caption.67}%
 \contentsline {figure}{\numberline {6.2.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές αρχικοποιήσεις των βαρών του εξαγωγέα χαρακτηριστικών.}}{73}{figure.caption.68}%
 \contentsline {figure}{\numberline {6.3.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές μεθόδους κανονικοποίησης. BN: Κανονικό VAN-B0. GN: Παραλλαγή VAN-Β0 με κανονικοποίηση ανά ομάδα. BGN: Παραλλαγή VAN-Β0 με κανονικοποίηση ανά παρτίδα και ομάδα.}}{74}{figure.caption.70}%
 \contentsline {figure}{\numberline {6.4.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικά πλήθη νευρώνων σε κάθε κρυφό στρώμα του MLP. MLP3: Πλήθος νευρώνων ίσο με το τριπλάσιο του πλήθους των καναλιών του χάρτη χαρακτηριστικών. MLP4: Τετραπλάσιο MLP5: Πεντα- πλάσιο.}}{75}{figure.caption.72}%
 \contentsline {figure}{\numberline {6.4.2}{\ignorespaces Σύγκριση πανοπτικής ποιότητας της παραλλαγής MLP4 του VAN για διαφορετικές μεθόδους κανονικοποίησης. MLP4-BN: Παραλλαγή MLP4 με κανονικοποίηση ανά παρτίδα. MLP4-GN: Παραλλαγή MLP4 με κανονικοποίηση ανά ομάδα. MLP4-BGN: Παραλλαγή MLP4 με κανονικοποίηση ανά παρτίδα και ομάδα.}}{76}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.5.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές τιμές των συνολικών επαναλήψεων προσαρμογής της θερμοκρασίας. VAN-20000: Πλήθος επαναλήψεων ίσο με 20000. VAN-40000: Πλήθος επαναλήψεων ίσο με 40000.}}{77}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.5.2}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές τιμές του ρυθμού μάθησης.}}{78}{figure.caption.78}%

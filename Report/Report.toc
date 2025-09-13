@@ -89,9 +89,8 @@
 \contentsline {subsection}{\numberline {6.1}Γενικό πλαίσιο}{72}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Παράμετροι εκπαίδευσης}{72}{subsubsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.2}Αρχικοποίηση παραμέτρων}{72}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Πειραματικά αποτελέσματα για διαφορετικές μεθόδους \\ κανονικοποίησης τιμών}{73}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Εναλλακτικές μέθοδοι κανονικοποίησης τιμών}{73}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Αντικατάσταση σημειακής συνέλιξης με MLP}{75}{subsection.6.4}%
 \contentsline {subsection}{\numberline {6.5}Χρήση LKA πολλαπλών κλάδων}{77}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Συμπεράσματα και μελλοντικές επεκτάσεις}{78}{section.7}%
-\contentsline {section}{Βιβλιογραφική αναφορά}{79}{section.7}%
-\contentsline {section}{Παράρτημα}{85}{section*.76}%
+\contentsline {section}{\numberline {7}Συμπεράσματα και μελλοντικές επεκτάσεις}{80}{section.7}%
+\contentsline {section}{Παράρτημα}{82}{section*.82}%
