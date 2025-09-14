@@ -7,45 +7,45 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {greek}{}\relax 
-\contentsline {figure}{\numberline {1.1.1}{\ignorespaces Αυθεντική εικόνα}}{6}{figure.caption.4}%
-\contentsline {figure}{\numberline {1.1.2}{\ignorespaces Σημασιολογική κατάτμηση εικόνας}}{6}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.1.3}{\ignorespaces Κατάτμηση αντικειμένων}}{7}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.1.4}{\ignorespaces Πανοπτική κατάτμηση εικόνας}}{8}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.1.1}{\ignorespaces Δομή νευρώνα}}{12}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.2.1}{\ignorespaces Μοντέλο McCulloch και Pitts του νευρώνα}}{14}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.2.2}{\ignorespaces Σχηματική αναπαράσταση του νευρώνα}}{15}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.2.3}{\ignorespaces Γραφική μορφή βηματικής συνάρτησης -1/1}}{16}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.2.4}{\ignorespaces Γραφική μορφή σιγμοειδής συνάρτησης}}{17}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.2.5}{\ignorespaces Γραφική μορφή υπερβολικής εφαπτομένης}}{18}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.2.6}{\ignorespaces Γραφική μορφή συνάρτησης ReLU}}{19}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.2.7}{\ignorespaces Γραφική μορφή συνάρτησης GeLU}}{20}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.2.8}{\ignorespaces Γραφική μορφή γραμμικής συνάρτησης}}{21}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Ταξινόμηση στον \(\mathbb {R}^2\) μέσω δικτύου Perceptron}}{22}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.3.2}{\ignorespaces Γενική σχηματική μορφή δικτύου Perceptron πολλών στρωμάτων}}{23}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.3.3}{\ignorespaces Απεικόνιση της τεχνικής της απόρριψης: (a) Κατά την εκπαίδευση, κάθε μονάδα διατηρείται με πιθανότητα $p$. (b) Κατά τη δοκιμή, όλες οι μονάδες είναι ενεργές και τα βάρη κλιμακώνονται κατά $p$.}}{33}{figure.caption.40}%
-\contentsline {figure}{\numberline {2.4.1}{\ignorespaces Η αρχιτεκτονική ενός τυπικού συνελικτικού νευρωνικού δικτύου}}{35}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.4.2}{\ignorespaces Αναπαράσταση υπολογισμού νευρώνα \(y_{ij}^{k}\) του \(k\)-οστού χάρτη χαρακτηριστικών και στρώματος \(L\)}}{36}{figure.caption.43}%
-\contentsline {figure}{\numberline {2.4.3}{\ignorespaces Εξαγωγή χαρακτηριστικών}}{36}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.5.1}{\ignorespaces Αρχιτεκτονική μετασχηματιστή}}{43}{figure.caption.48}%
-\contentsline {figure}{\numberline {3.1.1}{\ignorespaces Κατηγορίες αντικειμένων συνόλου δεδομένων COCO}}{48}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.1.2}{\ignorespaces Αντικείμενα συνόλου δεδομένων Cityscapes}}{49}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.1.3}{\ignorespaces Αντικείμενα και υπο-αντικείμενα συνόλου δεδομένων ADE20K}}{50}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.2.1}{\ignorespaces Μορφή πίνακα σύγχυσης για δυαδική ταξινόμηση}}{51}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.2.2}{\ignorespaces Παράδειγμα διαχωρισμού των τμημάτων της κατηγορίας "person" στα σύνολα \(TP\), \(FP\) και \(FN\).}}{55}{figure.caption.55}%
-\contentsline {figure}{\numberline {4.1.1}{\ignorespaces Αρχιτεκτονική μοντέλου Mask DINO}}{58}{figure.caption.56}%
-\contentsline {figure}{\numberline {4.1.2}{\ignorespaces Μετα-αρχιτεκτονική μοντέλου kMaX-DeepLab}}{59}{figure.caption.57}%
-\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Αρχιτεκτονικές τεχνικών (a) Squeeze-and-Excitation, (b) Switchable Atrous Convolution}}{61}{figure.caption.59}%
-\contentsline {figure}{\numberline {4.3.1}{\ignorespaces Αρχιτεκτονική OneFormer}}{62}{figure.caption.60}%
-\contentsline {figure}{\numberline {4.3.2}{\ignorespaces Αρχιτεκτονική OpenSeed}}{63}{figure.caption.61}%
-\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Αρχιτεκτονική μοντέλου Panoptic-DeepLab}}{64}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Αρχιτεκτονική μοντέλου UPSNet}}{65}{figure.caption.63}%
-\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Αρχιτεκτονική μοντέλου Max-DeepLab}}{66}{figure.caption.64}%
-\contentsline {figure}{\numberline {5.1.1}{\ignorespaces Αποσύνθεση συνέλιξης μεγάλου πυρήνα για \(K =\) 7 και \(d =\) 2.}}{68}{figure.caption.65}%
-\contentsline {figure}{\numberline {5.1.2}{\ignorespaces Αρχιτεκτονική ενός σταδίου του VAN}}{69}{figure.caption.66}%
-\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Αρχιτεκτονική ενός σταδίου του VANmb}}{70}{figure.caption.67}%
-\contentsline {figure}{\numberline {6.2.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές αρχικοποιήσεις των βαρών του εξαγωγέα χαρακτηριστικών.}}{73}{figure.caption.68}%
-\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές μεθόδους κανονικοποίησης. BN: Κανονικό VAN-B0. GN: Παραλλαγή VAN-Β0 με κανονικοποίηση ανά ομάδα. BGN: Παραλλαγή VAN-Β0 με κανονικοποίηση ανά παρτίδα και ομάδα.}}{74}{figure.caption.70}%
-\contentsline {figure}{\numberline {6.4.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικά πλήθη νευρώνων σε κάθε κρυφό στρώμα του MLP. MLP3: Πλήθος νευρώνων ίσο με το τριπλάσιο του πλήθους των καναλιών του χάρτη χαρακτηριστικών. MLP4: Τετραπλάσιο MLP5: Πεντα- πλάσιο.}}{75}{figure.caption.72}%
-\contentsline {figure}{\numberline {6.4.2}{\ignorespaces Σύγκριση πανοπτικής ποιότητας της παραλλαγής MLP4 του VAN για διαφορετικές μεθόδους κανονικοποίησης. MLP4-BN: Παραλλαγή MLP4 με κανονικοποίηση ανά παρτίδα. MLP4-GN: Παραλλαγή MLP4 με κανονικοποίηση ανά ομάδα. MLP4-BGN: Παραλλαγή MLP4 με κανονικοποίηση ανά παρτίδα και ομάδα.}}{76}{figure.caption.74}%
-\contentsline {figure}{\numberline {6.5.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές τιμές των συνολικών επαναλήψεων προσαρμογής της θερμοκρασίας. VAN-20000: Πλήθος επαναλήψεων ίσο με 20000. VAN-40000: Πλήθος επαναλήψεων ίσο με 40000.}}{77}{figure.caption.76}%
-\contentsline {figure}{\numberline {6.5.2}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές τιμές του ρυθμού μάθησης.}}{78}{figure.caption.78}%
+\contentsline {figure}{\numberline {1.1.1}{\ignorespaces Αυθεντική εικόνα}}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {1.1.2}{\ignorespaces Σημασιολογική κατάτμηση εικόνας}}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.1.3}{\ignorespaces Κατάτμηση αντικειμένων}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.1.4}{\ignorespaces Πανοπτική κατάτμηση εικόνας}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.1.1}{\ignorespaces Δομή νευρώνα}}{13}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.2.1}{\ignorespaces Μοντέλο McCulloch και Pitts του νευρώνα}}{15}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.2.2}{\ignorespaces Σχηματική αναπαράσταση του νευρώνα}}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.2.3}{\ignorespaces Γραφική μορφή βηματικής συνάρτησης -1/1}}{17}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.2.4}{\ignorespaces Γραφική μορφή σιγμοειδής συνάρτησης}}{18}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.2.5}{\ignorespaces Γραφική μορφή υπερβολικής εφαπτομένης}}{19}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2.6}{\ignorespaces Γραφική μορφή συνάρτησης ReLU}}{20}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.2.7}{\ignorespaces Γραφική μορφή συνάρτησης GeLU}}{21}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.2.8}{\ignorespaces Γραφική μορφή γραμμικής συνάρτησης}}{22}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Ταξινόμηση στον \(\mathbb {R}^2\) μέσω δικτύου Perceptron}}{23}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.3.2}{\ignorespaces Γενική σχηματική μορφή δικτύου Perceptron πολλών στρωμάτων}}{24}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.3.3}{\ignorespaces Απεικόνιση της τεχνικής της απόρριψης: (a) Κατά την εκπαίδευση, κάθε μονάδα διατηρείται με πιθανότητα $p$. (b) Κατά τη δοκιμή, όλες οι μονάδες είναι ενεργές και τα βάρη κλιμακώνονται κατά $p$.}}{34}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.4.1}{\ignorespaces Η αρχιτεκτονική ενός τυπικού συνελικτικού νευρωνικού δικτύου}}{36}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.4.2}{\ignorespaces Αναπαράσταση υπολογισμού νευρώνα \(y_{ij}^{k}\) του \(k\)-οστού χάρτη χαρακτηριστικών και στρώματος \(L\)}}{37}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.4.3}{\ignorespaces Εξαγωγή χαρακτηριστικών}}{37}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.5.1}{\ignorespaces Αρχιτεκτονική μετασχηματιστή}}{44}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.1.1}{\ignorespaces Κατηγορίες αντικειμένων συνόλου δεδομένων COCO}}{50}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.1.2}{\ignorespaces Αντικείμενα συνόλου δεδομένων Cityscapes}}{51}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.1.3}{\ignorespaces Αντικείμενα και υπο-αντικείμενα συνόλου δεδομένων ADE20K}}{52}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.2.1}{\ignorespaces Μορφή πίνακα σύγχυσης για δυαδική ταξινόμηση}}{53}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.2.2}{\ignorespaces Παράδειγμα διαχωρισμού των τμημάτων της κατηγορίας "person" στα σύνολα \(TP\), \(FP\) και \(FN\).}}{57}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.1.1}{\ignorespaces Αρχιτεκτονική μοντέλου Mask DINO}}{61}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.1.2}{\ignorespaces Μετα-αρχιτεκτονική μοντέλου kMaX-DeepLab}}{62}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Αρχιτεκτονικές τεχνικών (a) Squeeze-and-Excitation, (b) Switchable Atrous Convolution}}{64}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.3.1}{\ignorespaces Αρχιτεκτονική OneFormer}}{65}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.3.2}{\ignorespaces Αρχιτεκτονική OpenSeed}}{66}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Αρχιτεκτονική μοντέλου Panoptic-DeepLab}}{67}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Αρχιτεκτονική μοντέλου UPSNet}}{68}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Αρχιτεκτονική μοντέλου Max-DeepLab}}{69}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.1.1}{\ignorespaces Αποσύνθεση συνέλιξης μεγάλου πυρήνα για \(K =\) 7 και \(d =\) 2.}}{72}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.1.2}{\ignorespaces Αρχιτεκτονική ενός σταδίου του VAN}}{73}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Αρχιτεκτονική ενός σταδίου του VANmb}}{74}{figure.caption.67}%
+\contentsline {figure}{\numberline {6.2.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές αρχικοποιήσεις των βαρών του εξαγωγέα χαρακτηριστικών.}}{78}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές μεθόδους κανονικοποίησης. BN: Κανονικό VAN-B0. GN: Παραλλαγή VAN-Β0 με κανονικοποίηση ανά ομάδα. BGN: Παραλλαγή VAN-Β0 με κανονικοποίηση ανά παρτίδα και ομάδα.}}{79}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.4.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικά πλήθη νευρώνων σε κάθε κρυφό στρώμα του MLP. MLP3: Πλήθος νευρώνων ίσο με το τριπλάσιο του πλήθους των καναλιών του χάρτη χαρακτηριστικών. MLP4: Τετραπλάσιο MLP5: Πεντα- πλάσιο.}}{80}{figure.caption.72}%
+\contentsline {figure}{\numberline {6.4.2}{\ignorespaces Σύγκριση πανοπτικής ποιότητας της παραλλαγής MLP4 του VAN για διαφορετικές μεθόδους κανονικοποίησης. MLP4-BN: Παραλλαγή MLP4 με κανονικοποίηση ανά παρτίδα. MLP4-GN: Παραλλαγή MLP4 με κανονικοποίηση ανά ομάδα. MLP4-BGN: Παραλλαγή MLP4 με κανονικοποίηση ανά παρτίδα και ομάδα.}}{81}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.5.1}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές τιμές των συνολικών επαναλήψεων προσαρμογής της θερμοκρασίας. VAN-20000: Πλήθος επαναλήψεων ίσο με 20000. VAN-40000: Πλήθος επαναλήψεων ίσο με 40000.}}{82}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.5.2}{\ignorespaces Σύγκριση πανοπτικής ποιότητας για διαφορετικές τιμές του ρυθμού μάθησης.}}{83}{figure.caption.78}%

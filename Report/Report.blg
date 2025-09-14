@@ -1,51 +1,81 @@
-This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Report.aux
-No "}"---line 451 of file Report.aux
- : \citation{DBLP:journals/corr
- :                             
-I'm skipping whatever remains of this command
-I found no \bibdata command---while reading file Report.aux
-I found no \bibstyle command---while reading file Report.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Warning--entry type for "unknown1" isn't style-file defined
+--line 85 of file references.bib
+Warning--entry type for "shah2023coco" isn't style-file defined
+--line 471 of file references.bib
+Warning--entry type for "bhandari2025confusion" isn't style-file defined
+--line 609 of file references.bib
+Warning--entry type for "Kookna2022Segmentation" isn't style-file defined
+--line 641 of file references.bib
+Warning--entry type for "Bex2021MulticlassMetrics" isn't style-file defined
+--line 655 of file references.bib
+Warning--entry type for "shah2022map" isn't style-file defined
+--line 689 of file references.bib
+Warning--entry type for "Navlani2022Activation" isn't style-file defined
+--line 725 of file references.bib
+Warning--entry type for "codecademy_linear_activation_2023" isn't style-file defined
+--line 739 of file references.bib
+Warning--entry type for "baheti_activation_functions_2021" isn't style-file defined
+--line 753 of file references.bib
+Repeated entry---line 811 of file references.bib
+ : @article{rosenblatt1958perceptron
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1175 of file references.bib
+ : @misc{cheng2022maskedattentionmasktransformeruniversal
+ :                                                       ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "onix_image_classification_2024" isn't style-file defined
+--line 1313 of file references.bib
+Warning--empty journal in article2
+Warning--empty journal in article11
+Warning--empty year in BotsisDiamantaras2019
+Warning--empty journal in article3
 You've used 92 entries,
-            0 wiz_defined-function locations,
-            192 strings with 3391 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
+            1876 wiz_defined-function locations,
+            856 strings with 19435 characters,
+and the built_in function-call counts, 18321 in all, are:
+= -- 1371
+> -- 1347
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 485
+- -- 393
+* -- 1313
+:= -- 2854
+add.period$ -- 96
+call.type$ -- 92
+change.case$ -- 91
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 96
+duplicate$ -- 644
+empty$ -- 1818
+format.name$ -- 393
+if$ -- 4312
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+int.to.str$ -- 92
+missing$ -- 29
+newline$ -- 283
+num.names$ -- 94
+pop$ -- 541
+preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 0
+skip$ -- 511
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 371
+swap$ -- 152
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+warning$ -- 4
+while$ -- 124
+width$ -- 94
+write$ -- 720
+(There were 2 error messages)
