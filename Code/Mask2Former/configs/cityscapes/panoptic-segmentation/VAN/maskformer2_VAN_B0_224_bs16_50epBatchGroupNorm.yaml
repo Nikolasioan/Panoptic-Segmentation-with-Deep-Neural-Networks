@@ -1,0 +1,17 @@
+_BASE_: "../maskformer2_R50_bs16_90k.yaml"
+OUTPUT_DIR: "output/cityscapes/maskformer2_VAN_B0_224_bs16_50ep_BatchGroupNorm" # That is where the model weights will be saved.
+MODEL:
+  BACKBONE:
+    NAME: "D2VAN"
+  VAN:
+    NORMALIZATION: "BatchGroupNorm"
+    EMBED_DIMS : [32, 64, 160, 256]
+    MLP_RATIOS : [8, 8, 4, 4]
+    DEPTHS : [3, 3, 5, 2]    
+    PRETRAINED_VAN : "https://huggingface.co/Visual-Attention-Network/VAN-Tiny-original/resolve/main/van_tiny_754.pth.tar"
+  PIXEL_MEAN: [123.675, 116.280, 103.530] # I dont know if I should put this as well as the next one.
+  PIXEL_STD: [58.395, 57.120, 57.375]
+SOLVER:
+  IMS_PER_BATCH: 2
+  BASE_LR: 0.00003535
+  OPTIMIZER: "ADAMW"

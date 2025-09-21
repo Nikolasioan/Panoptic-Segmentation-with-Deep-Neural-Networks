@@ -1,0 +1,11 @@
+_BASE_: "../maskformer2_R50_bs16_50ep.yaml"
+MODEL:
+  BACKBONE:
+    NAME: "D2VAN"
+  VAN:
+    EMBED_DIMS : [64, 128, 320, 512]
+    MLP_RATIOS : [8, 8, 4, 4]
+    DEPTHS : [3, 3, 12, 3]
+    PRETRAINED_VAN : "https://huggingface.co/Visual-Attention-Network/VAN-Base-original/resolve/main/van_base_828.pth.tar"
+  PIXEL_MEAN: [123.675, 116.280, 103.530] # I dont know if I should put this as well as the next one.
+  PIXEL_STD: [58.395, 57.120, 57.375]

@@ -1,0 +1,12 @@
+_BASE_: ../maskformer2_R50_bs16_160k.yaml
+OUTPUT_DIR: "output/ADE20K/maskformer2_VAN_B1_224_bs16_50ep" # That is where the model weights will be saved.
+MODEL:
+  BACKBONE:
+    NAME: "D2VAN"
+  VAN:
+    EMBED_DIMS : [64, 128, 320, 512]
+    MLP_RATIOS : [8, 8, 4, 4]
+    DEPTHS : [2, 2, 4, 2] 
+    PRETRAINED_VAN : "https://huggingface.co/Visual-Attention-Network/VAN-Small-original/resolve/main/van_small_811.pth.tar"
+  PIXEL_MEAN: [123.675, 116.280, 103.530] # I dont know if I should put this as well as the next one.
+  PIXEL_STD: [58.395, 57.120, 57.375]
