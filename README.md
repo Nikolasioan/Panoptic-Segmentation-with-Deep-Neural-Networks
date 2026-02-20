@@ -1,149 +1,273 @@
 ## Contribution of This Work
 
-This work is based on the Visual Attention Network (VAN) feature extractor. For this reason, the VAN architecture and its core components are first presented in detail in order to clarify how it operates. Next, the modifications implemented in this work are described, leading to the proposed Visual Attention Network multi-branch model.
+This work is based on the Visual Attention Network (VAN) feature extractor. For this reason, the VAN architecture and its core components are first presented in detail to clarify its operation. Next, the modifications implemented in this work are described, leading to the proposed Visual Attention Network multi-branch model.
+
+<br />
+
 
 ### Visual Attention Network
 
-The Visual Attention Network (VAN) [1] is a feature extractor designed to combine the advantages of convolutional neural networks and self-attention mechanisms, while avoiding their main drawbacks. VAN is built around a new self-attention mechanism called Large Kernel Attention (LKA). Although self-attention was originally introduced for natural language processing, it was later widely adopted in computer-vision tasks. However, due to the two-dimensional nature of images, applying self-attention to visual data introduced several challenges:
+The Visual Attention Network (VAN) is a feature extractor designed to combine the strengths of convolutional neural networks and self-attention mechanisms while avoiding their main drawbacks. VAN is built around a self-attention mechanism called Large Kernel Attention (LKA). Although self-attention was originally introduced for natural language processing, it was later widely adopted in computer-vision tasks. However, due to the two-dimensional nature of images, applying self-attention to visual data introduces several challenges:
+
+<br />
+
 
 - Treating images as one-dimensional sequences ignores their inherent 2D structure.
-- The computational complexity O(n<sup>2</sup>) of standard self-attention is too high for high-resolution images.
-- Conventional self-attention focuses mainly on spatial interactions between pixels and often neglects interactions across channels. In many cases, different channels correspond to different objects or semantic information.
 
-Large Kernel Attention aims to address these issues. LKA is a core component of VAN and, while it is an attention mechanism, it does not inherit the same limitations. The key idea is to use large-kernel convolutions, enabling the model to capture relationships between pixels that are far apart. However, large-kernel convolutions are computationally expensive and require a large number of parameters. To mitigate this, LKA uses a decomposed convolution form that significantly reduces computational cost.
+- The computational complexity $O(n^2)$ of standard self-attention is too high for high-resolution images.
+
+- Conventional self-attention primarily models spatial interactions between pixels and often underrepresents interactions across channels. In many cases, different channels correspond to different objects or semantic information.
+
+<br />
+
+
+Large Kernel Attention aims to address these issues. LKA is a core component of VAN and, while it is an attention mechanism, it does not inherit the same limitations. The key idea is to use large-kernel convolutions, enabling the model to capture relationships between distant pixels. However, large-kernel convolutions are computationally expensive and require a large number of parameters. To mitigate this, LKA adopts a decomposed convolution form that significantly reduces computational cost.
 
 Specifically, a large-kernel convolution is decomposed into three parts: a small spatial convolution for capturing local correlations, a dilated spatial convolution for capturing long-range dependencies, and a pointwise convolution for capturing channel interactions.
 
 In the original implementation, a `K × K` convolution is decomposed into:
+
+<br />
+
 - a `⌈K/d⌉ × ⌈K/d⌉` spatial convolution with dilation factor `d` spatial convolution with dilation factor `d`,
+
 - a `(2d − 1) × (2d − 1)` spatial convolution, and
+
 - a pointwise convolution.
+
+<br />
+
 
 This decomposition makes it possible to capture long-range pixel correlations without a substantial increase in computational complexity or model parameters.
 
+<br />
+<br />
+
 <p align="center">
-  <img src="image.png" alt="LKA decomposition (K=7, d=2)" width="450">
+  <img src="readMeImages/image.png" alt="LKA decomposition (K=7, d=2)" width="450">
   <br>
-  <em>Figure LKA: Decomposition of a large-kernel convolution for K = 7 and d = 2.</em>
+  <em>Figure 1: Decomposition of a large-kernel convolution for K = 7 and d = 2.</em>
 </p>
 
+<br />
+<br />
+
 The LKA mechanism can be expressed as:
+
+<br />
+
 
 $$
 \text{Attention}(F)=\text{Conv}_{1\times 1}\!\left(\text{DW-D-Conv}\!\left(\text{DW-Conv}(F)\right)\right)
 $$
 
+<br />
+
+
 $$
 \text{Output}(F)=\text{Attention}(F)\otimes F
 $$
 
+<br />
+
+
 where F ∈ R<sup>C×H×W</sup> is the feature map and Attention ∈ R<sup>C&times;H&times;W</sup> is the attention map. Each value in the attention map represents the importance of the corresponding feature. The operator `⊗` denotes element-wise multiplication.
 
 VAN consists of four sequential stages. Let the input image have dimensions `H × W × C`. Before each stage, the input resolution is reduced using strided convolutions. The spatial resolution changes as follows:
+<br />
+
+
 - Stage 1: `H/4 × W/4`
+
 - Stage 2: `H/8 × W/8`
+
 - Stage 3: `H/16 × W/16`
+
 - Stage 4: `H/32 × W/32`
 
+<br />
+
+
 VAN is available in seven variants. The number of channels `C` in each stage depends on the chosen variant. For example, in VAN-B0 the channel dimensions are:
+
+<br />
+
+
 - Stage 1: `C = 32`
+
 - Stage 2: `C = 64`
+
 - Stage 3: `C = 160`
+
 - Stage 4: `C = 256`
+
+<br />
+
 
 Within each stage, both the spatial resolution and channel dimension remain constant. Each stage consists of a sequence of `L` identical layers. The value of `L` depends on the stage and the selected VAN variant. For VAN-B0, `L = 3` for stages 1 and 2, `L = 5` for stage 3, and `L = 2` for stage 4.
 
+<br />
+<br />
+
 <p align="center">
-  <img src="image-1.png" alt="VANmb stage architecture" width="350">
+  <img src="readMeImages/image-1.png" alt="VANmb stage architecture" width="350">
   <br>
-  <em>Figure VAN stage: Schematic representation of a single VAN stage.</em>
+  <em>Figure 2: Schematic representation of a single VAN stage.</em>
 </p>
+
+<br />
+<br />
 
 
 In the original implementation, the default values are `K = 21` and `d = 3`. This corresponds to a `5 × 5` spatial convolution and a `7 × 7` dilated spatial convolution with dilation factor 3.
+
+<br />
+
 
 ### Visual Attention Network multi-branch
 
 The Visual Attention Network multi-branch (VANmb) is a CNN-based feature extractor and an extension of VAN. A key limitation of VAN is that it relies on a single processing path, which restricts its ability to exploit different levels of information simultaneously. VANmb is proposed to address this limitation. Introducing a multi-branch version of the Large Kernel Attention mechanism enables parallel processing of different information views, leading to richer feature representations.
 
 In this work, the LKA mechanism is replaced by the Large Kernel Attention multi-branch mechanism (LKAmb), which consists of three LKA branches:
+
 - Branch 1 uses the original VAN settings `K = 21` and `d = 3`.
+
 - Branch 2 uses `K = 15` and `d = 3`.
+
 - Branch 3 uses `K = 12` and `d = 2`.
 
+<br />
+<br />
+
 <p align="center">
-  <img src="image-2.png" alt="VANmb stage architecture" width="350">
+  <img src="readMeImages/image-2.png" alt="VANmb stage architecture" width="350">
   <br>
-  <em>Figure VANmb: Architecture of a single VANmb stage.</em>
+  <em>Figure 3: Architecture of a single VANmb stage.</em>
 </p>
 
+<br />
+<br />
+
 The output of LKAmb is defined as:
+
+<br />
+
 
 $$
 \text{Output}(LKA_1,LKA_2,LKA_3)=v_1\cdot LKA_1+v_2\cdot LKA_2+v_3\cdot LKA_3
 $$
 
+<br />
+
+
 The values v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub> are weights produced by applying a Softmax normalization over learned parameters. Therefore:
+
+<br />
+
 
 $$
 v_i \ge 0,\qquad v_1+v_2+v_3=1
 $$
 
+<br />
+
+
 During the first 20.000 training iterations, a temperature parameter is incorporated into the Softmax. The temperature is initialized at five and decays exponentially to one. The temperature at each iteration is computed as:
+
+<br />
+
 
 $$
 T(\text{step}) = T_{\text{end}} + \left(T_{\text{start}} - T_{\text{end}}\right)\exp\!\left(-T_{\text{start}}\cdot \text{progress}\right)
 $$
 
+<br />
+
+
 $$
 \text{progress}=\min\!\left(\frac{\text{step}}{\text{iterations}},\,1.0\right)
 $$
 
+<br />
+
+
 where `T` is the temperature, `iterations` is the number of iterations required to reach the final temperature, and `step` is the current training iteration. The branch weights are computed as:
+
+<br />
+
 
 $$
 \text{value}_i(T)=\frac{e^{w_i/T}}{\sum_{j=1}^{3} e^{w_j/T}}, \quad i\in\{1,2,3\}
 $$
 
+<br />
+
+
 where w<sub>i</sub> are learnable parameters initialized to 1.
 
 The purpose of the temperature parameter is to ensure that all branches receive sufficient training time and that the model does not collapse into relying on only one branch.
 
-The experimental results for VANmb are presented in Section `VANmbexperiments`.
+The experimental results for VANmb are presented in Section `Multi-Branch LKA (LKAmb)`.
+
+<br />
+
 
 ## Experimental Results
 
-To obtain the final model, a large number of experiments were conducted across several variants of VAN [1]. These variants included changes to both the architecture and the parameter initialization, with the goal of examining how each modification affects performance. Through a comparative evaluation of the results, the most effective configurations were identified and subsequently used to shape the final model. Detailed results tables are provided in the Appendix section (see `Appendix`).
+To obtain the final model, a large number of experiments were conducted across several variants of VAN. These variants included changes to both the architecture and the parameter initialization, with the goal of examining how each modification affects performance. Through a comparative evaluation of the results, the most effective configurations were identified and subsequently used to shape the final model. Detailed results tables are provided in the Appendix section.
+
+<br />
+
 
 ### General Setup
 
-All experiments were based on the official Mask2Former codebase [2], which is built on top of Detectron2 [3]. The Mask2Former implementation was modified by replacing the Swin feature extractor [4] with a VAN feature extractor. Experiments were carried out on the Cityscapes validation set [5], using exclusively the VAN-B0 variant.
+All experiments were based on the official Mask2Former codebase, which is built on top of Detectron2. The Mask2Former implementation was modified by replacing the Swin feature extractor with a VAN feature extractor. Experiments were carried out on the Cityscapes validation set, using exclusively the VAN-B0 variant.
+
+<br />
+
 
 #### Training Parameters
 
 The original implementation uses 8 GPUs with a batch size of 16. Due to limited computational resources, the present implementation was trained using a single GPU with a batch size of 2. The GPU used was an NVIDIA GeForce RTX 4070.
 
-In the original setup, the learning rate is set to 1e-5 with weight decay equal to 0.05. However, because the batch size was reduced to 2, the learning rate was set to 3.535 &times; 10<sup>-5</sup> (i.e., 3535 &times; 10<sup>-8</sup>). The AdamW optimizer [6] was used, and the learning rate schedule followed the Poly policy [7].
+In the original setup, the learning rate is set to 1e-5 with weight decay equal to 0.05. However, because the batch size was reduced to 2, the learning rate was set to 3535 &times; 10<sup>-5</sup> (i.e., 3535 &times; 10<sup>-8</sup>). The AdamW optimizer was used, and the learning rate schedule followed the Poly policy.
 
 All models were trained on Cityscapes for a total of 148.800 iterations (equivalently, 100 epochs). The only exception was the final model, which was trained for 297.600 iterations (equivalently, 200 epochs). Although the original implementation defines experiments for 90.000 iterations, this setting was not adopted here due to limited computational capacity. For the final model, an additional learning rate value was also evaluated, specifically `1e-5`.
 
+<br />
+
+
 ### Parameter Initialization
 
-We investigated the impact of using pre-trained weights on model performance. Specifically, we used VAN weights pre-trained on ImageNet-1K [8] for the image classification task over 300 epochs. The goal was to examine whether this initialization provides an advantage over random weight initialization. A graphical comparison in terms of Panoptic Quality (PQ) is shown in Figure `init`.
+We investigated the impact of using pre-trained weights on model performance. Specifically, we used VAN weights pre-trained on ImageNet-1K for the image classification task over 300 epochs. The goal was to examine whether this initialization provides an advantage over random weight initialization. A graphical comparison in terms of Panoptic Quality (PQ) is shown in the following figure.
+
+<br />
+<br />
+
 
 <div align="center">
 
 <p align="center">
-  <img src="image-3.png" alt="Panoptic Quality comparison for different feature-extractor weight initializations" width="450">
+  <img src="readMeImages/image-3.png" alt="Panoptic Quality comparison for different feature-extractor weight initializations" width="450">
   <br>
-  <em>Figure init: Panoptic Quality comparison for different feature-extractor weight initializations.</em>
+  <em>Figure 4: Panoptic Quality comparison for different feature-extractor weight initializations.</em>
 </p>
 
 </div>
 
+<br />
+<br />
+
+
 Overall, initializing the feature extractor with ImageNet-1K pre-trained weights leads to better results compared to random initialization.
 
+<br />
+
+
 #### Results
+
+<br />
+
 
 <div align="center">
 
@@ -152,29 +276,46 @@ Overall, initializing the feature extractor with ImageNet-1K pre-trained weights
 | Mask2Former (VAN-B0) | ImageNet-1K pre-trained | 148.800 | 57.101 | 44.910 | 65.967 |
 | Mask2Former (VAN-B0) | Random | 148.800 | 38.726 | 20.307 | 52.122 |
 
+<em>Table 1: Comparison of feature-extractor weight initialization for Mask2Former with a VAN-B0 backbone on Cityscapes. Results are reported in terms of PQ (overall, things, and stuff) after 148,800 training iterations.</em>
+
+
 </div>
+
+<br />
+
 
 ### Alternative Normalization Methods
 
 As part of the experiments conducted to select the final model, we evaluated configurations where Batch Normalization (BN) was removed and replaced with alternative normalization methods. The normalization methods examined were Group Normalization (GN) and a Batch-and-Group Normalization (BGN) variant.
 
-The motivation for testing different normalization methods arose from the small batch size used in our setup. Due to limited GPU memory, the batch size had to be significantly reduced, which makes Batch Normalization less effective, since it does not perform as well with small batch sizes [9]. For this reason, additional normalization strategies were evaluated.
+The motivation for testing different normalization methods arose from the small batch size used in our setup. Due to limited GPU memory, the batch size had to be significantly reduced, which makes Batch Normalization less effective, since it does not perform as well with small batch sizes. For this reason, additional normalization strategies were evaluated.
 
 Since initialization with ImageNet-1K pre-trained weights was found to improve performance, all models in this set of experiments were trained using transfer learning. In this setting, parameters are transferred for all compatible components, while any newly introduced components are initialized randomly.
 
-A graphical comparison of the VAN Panoptic Quality (PQ) across normalization methods is shown in Figure `norm`.
+A graphical comparison of the VAN Panoptic Quality (PQ) across normalization methods is shown in the figure below.
+
+<br />
+<br />
+
 
 <div align="center">
 
 <p align="center">
-  <img src="image-4.png" alt="Panoptic Quality comparison for different normalization methods" width="450">
+  <img src="readMeImages/image-4.png" alt="Panoptic Quality comparison for different normalization methods" width="450">
   <br>
-  <em>Figure norm: Panoptic Quality comparison for different normalization methods. BN: standard VAN-B0. GN: VAN-B0 variant with Group Normalization. BGN: VAN-B0 variant with Batch-and-Group Normalization.</em>
+  <em>Figure 5: Panoptic Quality comparison for different normalization methods. BN: standard VAN-B0. GN: VAN-B0 variant with Group Normalization. BGN: VAN-B0 variant with Batch-and-Group Normalization.</em>
 </p>
 
 </div>
 
+<br />
+<br />
+
+
 It can be observed that Batch Normalization (BN) achieves better results compared to the other two normalization methods.
+
+<br />
+
 
 <div align="center">
 
@@ -184,13 +325,19 @@ It can be observed that Batch Normalization (BN) achieves better results compare
 | Mask2Former (VAN-B0) | ImageNet-1K pre-trained | GN  | 148.800 | 47.351 | 30.980 | 59.258 |
 | Mask2Former (VAN-B0) | ImageNet-1K pre-trained | BGN | 148.800 | 39.380 | 24.001 | 50.565 |
 
-<em>Table norm: Comparison of VAN-B0 results using different normalization methods. The † symbol denotes the use of ImageNet-1K pre-trained weights.</em>
+<em>Table 2: Comparison of VAN-B0 results using different normalization methods.</em>
 
 </div>
+
+<br />
+
 
 ### Replacing the Pointwise Convolution with an MLP
 
 We investigated replacing the pointwise convolution in the LKA module with a two-hidden-layer MLP. In this case, the attention computation takes the following form:
+
+<br />
+
 
 <div align="center">
 <p align="center">
@@ -203,46 +350,63 @@ $$
 
 </div>
 
+<br />
+
+
 The motivation behind replacing the pointwise convolution with a multi-layer perceptron stems from the linear nature of convolution. Introducing non-linearity may improve the representational capacity of the model.
 
 The number of input and output neurons in the MLP is the same and equals the number of channels in the feature map. To determine the hidden-layer size, we evaluated hidden dimensions equal to 3×, 4×, and 5× the number of feature-map channels. The activation function used was GELU.
 
-A graphical comparison of Panoptic Quality (PQ) for different hidden-layer sizes is shown in Figure `MLP`.
+A graphical comparison of Panoptic Quality (PQ) for different hidden-layer sizes is shown in the figure below.
+
+<br />
+<br />
+
 
 <div align="center">
 
 <p align="center">
-  <img src="image-5.png" alt="Panoptic Quality comparison for different normalization methods" width="450">
+  <img src="readMeImages/image-5.png" alt="Panoptic Quality comparison for different normalization methods" width="450">
   <br>
-  <em>Figure MLP: Panoptic Quality comparison for different normalization methods.</em>
+  <em>Figure 6: Panoptic Quality comparison for different normalization methods.</em>
 </p>
 
 </div>
 
+<br />
+<br />
+
+
 All examined VAN variants achieved similar performance; however, the highest Panoptic Quality was obtained with MLP4.
+
+<br />
+
 
 <div align="center">
 
-| Model | Initialization | Variant | Iterations | PQ | PQ<sub>th | PQ<sub>st |
+| Model | Initialization | Variant | Iterations | PQ | PQ<sub>th</sub> | PQ<sub>st</sub> |
 |---|---|---|---:|---:|---:|---:|
-| Mask2Former (VAN-B0) | ImageNet-1K pre-trained | MLP3 | 148.800 | 54.022 | 39.707 | 64.432 |
-| Mask2Former (VAN-B0) | ImageNet-1K pre-trained | MLP4 | 148.800 | 55.365 | 43.467 | 64.017 |
-| Mask2Former (VAN-B0) | ImageNet-1K pre-trained | MLP5 | 148.800 | 55.250 | 43.348 | 63.907 |
+| Mask2Former (VAN-B0) | ImageNet-1K pre-trained | MLP3 | 148,800 | 54.022 | 39.707 | 64.432 |
+| Mask2Former (VAN-B0) | ImageNet-1K pre-trained | MLP4 | 148,800 | 55.365 | 43.467 | 64.017 |
+| Mask2Former (VAN-B0) | ImageNet-1K pre-trained | MLP5 | 148,800 | 55.250 | 43.348 | 63.907 |
 
-Figure `MLP1` caption (for README): Panoptic Quality comparison for different numbers of neurons in each MLP hidden layer. MLP3: hidden size = 3× channels. MLP4: 4×. MLP5: 5×.
-
-
----
+<em>Table 3: Panoptic Quality comparison for different numbers of neurons in each MLP hidden layer. MLP3: hidden size = 3× channels. MLP4: 4×. MLP5: 5×.</em>
 
 </div>
+
+<br />
+
 
 ### MLP4 Combined with Alternative Normalization Methods
 
 Next, we evaluated the MLP4 VAN variant in combination with alternative normalization methods. Three normalization strategies were examined: Batch Normalization (BN), Group Normalization (GN), and a Batch-and-Group Normalization (BGN) variant.
 
-A graphical comparison of the Panoptic Quality (PQ) of the MLP4 variant under different normalization methods is shown in Figure `MLPnorma`.
+A graphical comparison of the Panoptic Quality (PQ) of the MLP4 variant under different normalization methods is shown in Figure 7.
 
 It can be observed that MLP4 with Batch Normalization (MLP4-BN) achieves better results compared to the other two methods.
+
+<br />
+
 
 <div align="center">
 
@@ -254,50 +418,76 @@ It can be observed that MLP4 with Batch Normalization (MLP4-BN) achieves better 
 | Mask2Former (VAN-B0) | ImageNet-1K pre-trained | MLP4 | GN  | 148.800 | 42.495 | 24.658 | 55.467 |
 | Mask2Former (VAN-B0) | ImageNet-1K pre-trained | MLP4 | BGN | 148.800 | 38.686 | 21.997 | 50.823 |
 
+<em>Table 4: Panoptic Quality comparison for the MLP4 VAN variant under different normalization methods (BN, GN, and BGN) after 148,800 training iterations.</em>
+
+
 </div>
+
+<br />
+<br />
+
 
 <div align="center">
 
 
-  <img src="image-6.png" alt="Panoptic Quality comparison of the MLP4 VAN variant under different normalization methods" width="450">
+  <img src="readMeImages/image-6.png" alt="Panoptic Quality comparison of the MLP4 VAN variant under different normalization methods" width="450">
   <br>
-  <em>Figure MLPnorma: Panoptic Quality comparison of the MLP4 VAN variant under different normalization methods. MLP4-BN: Batch Normalization. MLP4-GN: Group Normalization. MLP4-BGN: Batch-and-Group Normalization.</em>
+  <em>Figure 7: Panoptic Quality comparison of the MLP4 VAN variant under different normalization methods. MLP4-BN: Batch Normalization. MLP4-GN: Group Normalization. MLP4-BGN: Batch-and-Group Normalization.</em>
 </p>
 
 </div>
 
+<br />
+<br />
+
+
 ### Multi-Branch LKA (LKAmb)
 
-We investigated replacing the LKA mechanism of the Visual Attention Network (VAN) with the multi-branch LKAmb mechanism. This modification results in the VANmb model described in Section `VANmultibranch`. To optimize the model parameters, we evaluated two different values for the total number of temperature-adjustment iterations, namely 20.000 and 40.000.
+We investigated replacing the LKA mechanism of the Visual Attention Network (VAN) with the multi-branch LKAmb mechanism. This modification results in the VANmb model described in Section `Visual Attention Network multi-branch`. To optimize the model parameters, we evaluated two different values for the total number of temperature-adjustment iterations, namely 20.000 and 40.000.
 
-A graphical comparison of Panoptic Quality (PQ) for different temperature-adjustment iteration counts is shown in Figure `iterationsLKAmb`.
+A graphical comparison of Panoptic Quality (PQ) for different temperature-adjustment iteration counts is shown in Figure 8.
 
 It can be observed that VANmb with 20.000 temperature-adjustment iterations achieves better results than the alternative configuration.
 
+<br />
+
 <div align="center">
 
-| Model | Initialization | Temp-adjustment iterations | Training iterations | PQ | PQ<sub>th | PQ<sub>st |
+| Model | Initialization | Temp-adjustment iterations | Training iterations | PQ | PQ<sub>th</sub> | PQ<sub>st</sub> |
 |---|---|---:|---:|---:|---:|---:|
-| Mask2Former (VANmb-B0) | ImageNet-1K pre-trained | 20.000 | 148.800 | 55.436 | 43.282 | 64.322 |
-| Mask2Former (VANmb-B0) | ImageNet-1K pre-trained | 40.000 | 148.800 | 55.123 | 41.681 | 64.898 |
+| Mask2Former (VANmb-B0) | ImageNet-1K pre-trained | 20,000 | 148,800 | 55.436 | 43.282 | 64.322 |
+| Mask2Former (VANmb-B0) | ImageNet-1K pre-trained | 40,000 | 148,800 | 55.123 | 41.681 | 64.898 |
+
+<em>Table 5: Panoptic Quality comparison for different total numbers of temperature-adjustment iterations. VAN-20000: 20,000 iterations. VAN-40000: 40,000 iterations.</em>
 
 </div>
+
+<br />
+<br />
+
 
 <div align="center">
 
 <p align="center">
-  <img src="image-7.png" alt="Panoptic Quality comparison for different total numbers of temperature-adjustment iterations" width="450">
+  <img src="readMeImages/image-7.png" alt="Panoptic Quality comparison for different total numbers of temperature-adjustment iterations" width="450">
   <br>
-  <em>Figure iterationsLKAmb: Panoptic Quality comparison for different total numbers of temperature-adjustment iterations. VAN-20000: 20.000 iterations. VAN-40000: 40.000 iterations.</em>
+  <em>Figure 8: Panoptic Quality comparison for different total numbers of temperature-adjustment iterations. VAN-20000: 20.000 iterations. VAN-40000: 40.000 iterations.</em>
 </p>
 
 
 ---
 </div>
 
+<br />
+<br />
+
+
 ### Learning Rate Evaluation for VANmb-20000
 
-Next, we evaluated VANmb-20000 using an alternative learning rate, specifically `1e-5`. Figure `learningrateVANmb` shows a comparison of the Panoptic Quality (PQ) of Mask2Former [2] with the VANmb-20000 backbone for different learning-rate values.
+Next, we evaluated VANmb-20000 using an alternative learning rate, specifically `1e-5`. Figure 9 shows a comparison of the Panoptic Quality (PQ) of Mask2Former with the VANmb-20000 backbone for different learning-rate values.
+
+<br />
+
 
 
 #### Results (297.600 training iterations)
@@ -306,6 +496,9 @@ Next, we evaluated VANmb-20000 using an alternative learning rate, specifically 
 Model: Mask2Former (VANmb-20000)  
 Initialization: ImageNet-1K pre-trained  
 Learning rate: `1e-5`
+
+<br />
+
 
 
 
@@ -317,12 +510,21 @@ Learning rate: `1e-5`
 | Things | 27.782 | 77.410 | 35.986 |
 | Stuff | 61.123 | 79.394 | 74.891 |
 
+<em>Table 6: Final evaluation of Mask2Former with a VANmb-20000 backbone after 297,600 training iterations (Run A, learning rate <code>1e-5</code>). Results are reported for the All, Things, and Stuff splits in terms of PQ, SQ, and RQ.</em>
+
+
 </div>
+
+<br />
+
 
 **Run B**  
 Model: Mask2Former (VANmb-20000)  
 Initialization: ImageNet-1K pre-trained  
-Learning rate: `3.535e-5` (i.e., 3.535 &times; 10<sup>-8</sup>)
+Learning rate: `3535e-5` (i.e., 3535 &times; 10<sup>-8</sup>)
+
+<br />
+
 
 <div align="center">
 
@@ -332,39 +534,66 @@ Learning rate: `3.535e-5` (i.e., 3.535 &times; 10<sup>-8</sup>)
 | Things | 49.835 | 78.936 | 62.602 |
 | Stuff | 67.039 | 81.583 | 80.722 |
 
+<em>Table 7: Final evaluation of Mask2Former with a VANmb-20000 backbone after 297,600 training iterations (Run B, learning rate 3535 &times; 10<sup>-8</sup>). Results are reported for the All, Things, and Stuff splits in terms of PQ, SQ, and RQ.</em>
+
+
 </div>
 
-Overall, setting the learning rate to `3.535e-5` (i.e., 3.535 &times; 10<sup>-8</sup>) results in better performance compared to `1e-5`.
+<br />
+
+
+Overall, setting the learning rate to `3535e-5` (i.e., 3535 &times; 10<sup>-8</sup>) results in better performance compared to `1e-5`.
+
+<br />
+<br />
+
 
 <div align="center">
 
 
 <p align="center">
-  <img src="image-8.png" alt="Panoptic Quality comparison for different learning rates (VANmb-20000)" width="450">
+  <img src="readMeImages/image-8.png" alt="Panoptic Quality comparison for different learning rates (VANmb-20000)" width="450">
   <br>
-  <em>Figure learningrateVANmb: Panoptic Quality comparison for different learning-rate values using the VANmb-20000 backbone.</em>
+  <em>Figure 9: Panoptic Quality comparison for different learning-rate values using the VANmb-20000 backbone.</em>
 </p>
 
 </div>
 
+<br />
+<br />
+
+
 ## Conclusions and Future Work
 
-In conclusion, the experimental results highlight the potential of modern architectures for panoptic image segmentation. Modifying the VAN backbone [1] by extending it with additional components helped identify the most effective techniques, which were then used to introduce the new modified backbone VANmb.
+In conclusion, the experimental results highlight the potential of modern architectures for panoptic image segmentation. Modifying the VAN backbone by extending it with additional components helped identify the most effective techniques, which were then used to introduce the new modified backbone VANmb.
 
-The VANmb-B0 backbone, combined with the Mask2Former panoptic head [2], achieved Panoptic Quality (PQ) = 59.795 on the Cityscapes validation set [5]. Although this is a notable result, it does not reach the performance of state-of-the-art models. Table `tab:mask2former-backbones` summarizes the Mask2Former performance for different backbones.
+The VANmb-B0 backbone, combined with the Mask2Former panoptic head, achieved Panoptic Quality (PQ) = 59.795 on the Cityscapes validation set. Although this is a notable result, it does not reach the performance of state-of-the-art models. Table 8 summarizes the Mask2Former performance for different backbones.
+
+<br />
+
 
 <div align="center">
 
 
 | Model | Backbone | PQ |
 |---|---|---:|
-| Mask2Former | R50 [10] | 62.1 |
-| Mask2Former | Swin-B [4] | 66.1 |
-| Mask2Former | Swin-L [4] | 66.6 |
+| Mask2Former | R50 | 62.1 |
+| Mask2Former | Swin-B  | 66.1 |
+| Mask2Former | Swin-L | 66.6 |
+
+<em>Table 8: Panoptic Quality (PQ) of Mask2Former on the Cityscapes validation set for different backbone architectures.</em>
+
+
 
 </div>
 
+<br />
+
+
 Despite not matching these performance levels, this outcome was expected: the backbones listed above have substantially more parameters and were developed by large research teams with access to significantly greater computational resources. The relatively small parameter count of VANmb-B0 can still be an advantage, as it does not require high-end hardware and can be deployed on low-power devices (e.g., portable devices and small unmanned vehicles). In addition, the lower model complexity makes it an attractive option for real-time applications.
+
+<br />
+
 
 ### Future Work
 
@@ -372,7 +601,7 @@ The proposed model offers substantial room for improvement. Future work may expl
 
 - Evaluate VANmb on additional vision tasks (e.g., pose estimation, image classification, semantic segmentation).
 
-- Combine VANmb with alternative panoptic segmentation heads and benchmark on additional datasets (e.g., COCO [11], ADE20K [12]).
+- Combine VANmb with alternative panoptic segmentation heads and benchmark on additional datasets (e.g., COCO, ADE20K).
 
 - Explore additional LKAmb configurations (e.g., different numbers of branches, kernel sizes, and temperature-adjustment schedules).
 
@@ -380,19 +609,31 @@ The proposed model offers substantial room for improvement. Future work may expl
 
 - Study multi-scale LKAmb designs where each branch uses multiple kernel sizes.
 
-- Pre-train all VANmb components end-to-end (rather than partial initialization), using datasets such as ImageNet [8].
+- Pre-train all VANmb components end-to-end (rather than partial initialization), using datasets such as ImageNet.
 
 - Evaluate additional VANmb variants that could not be explored due to limited computational resources.
 
+<br />
+
+
 ## Appendix
 
-This appendix provides a detailed summary of the experimental results reported in this work. Evaluation was performed using the following metrics: PQ, PQ<sub>th</sub>, PQ<sub>st</sub>, SQ, SQ<sub>th</sub>, SQ<sub>st</sub>, RQ, RQ<sub>th</sub>, and RQ<sub>st</sub>. Metrics were recorded every 10.000 iterations. All experiments were conducted using the Mask2Former panoptic head [2].
+This appendix provides a detailed summary of the experimental results reported in this work. Evaluation was performed using the following metrics: PQ, PQ<sub>th</sub>, PQ<sub>st</sub>, SQ, SQ<sub>th</sub>, SQ<sub>st</sub>, RQ, RQ<sub>th</sub>, and RQ<sub>st</sub>. Metrics were recorded every 10.000 iterations. All experiments were conducted using the Mask2Former panoptic head.
+
+<br />
+
 
 ### A. Parameter Initialization
 
-Table `tab:noinitialize` reports the experimental results obtained using the VAN-B0 backbone with **random weight initialization**. (The corresponding table for **ImageNet-1K pre-trained** initialization is provided separately as `tab:initialize`.)
+Table 9 reports the experimental results obtained using the VAN-B0 backbone with **random weight initialization**. (The corresponding table for **ImageNet-1K pre-trained** initialization is provided separately in table 10.)
 
-#### Results: VAN-B0 with Random Initialization (`tab:noinitialize`)
+<br />
+
+
+#### Results: VAN-B0 with Random Initialization 
+
+<br />
+
 
 <div align="center">
 
@@ -415,9 +656,18 @@ Table `tab:noinitialize` reports the experimental results obtained using the VAN
 | 140k | 37.658 | 18.005 | 51.952 | 71.643 | 65.122 | 76.386 | 47.412 | 24.224 | 64.275 |
 | 148800 | 38.726 | 20.307 | 52.122 | 71.522 | 64.964 | 76.292 | 48.726 | 27.015 | 64.516 |
 
+<em>Table 9: Training progress of Mask2Former with a VAN-B0 backbone using random weight initialization. Results are reported at different training iterations for PQ, SQ, and RQ (overall and split into “things” and “stuff”).</em>
+
+
 </div>
 
-#### Results: VAN-B0 with ImageNet-1K Pre-trained Weights (`tab:initialize`)
+<br />
+
+
+#### Results: VAN-B0 with ImageNet-1K Pre-trained Weights 
+
+<br />
+
 
 <div align="center">
 
@@ -442,15 +692,26 @@ Table `tab:noinitialize` reports the experimental results obtained using the VAN
 
 ---
 
+<em>Table 10: Training progress of Mask2Former with a VAN-B0 backbone initialized with ImageNet-1K pre-trained weights. Results are reported at different training iterations for PQ, SQ, and RQ (overall and split into “things” and “stuff”).</em>
+
 </div>
+
+<br />
+
 
 ### B. Alternative Normalization Methods
 
-Table `tab:Group` reports the results obtained using VAN-B0 where **Batch Normalization** was replaced by **Group Normalization (GN)**. (The corresponding results for replacing BN with **Batch-and-Group Normalization (BGN)** are provided separately as `tab:BatchGroup`.)
+Table 11 reports the results obtained using VAN-B0 where **Batch Normalization** was replaced by **Group Normalization (GN)**. (The corresponding results for replacing BN with **Batch-and-Group Normalization (BGN)** are provided separately in table 12.)
 
 All models in this subsection use **ImageNet-1K pre-trained weights**; however, these weights are not fully compatible, as they were produced by training the standard VAN-B0 model.
 
-#### Results: VAN-B0 with Group Normalization (`tab:Group`)
+<br />
+
+
+#### Results: VAN-B0 with Group Normalization
+
+<br />
+
 
 <div align="center">
 
@@ -473,9 +734,19 @@ All models in this subsection use **ImageNet-1K pre-trained weights**; however, 
 | 140k | 47.159 | 30.533 | 59.250 | 78.221 | 77.245 | 78.931 | 58.791 | 39.543 | 72.789 |
 | 148800 | 47.351 | 30.980 | 59.258 | 78.292 | 77.412 | 78.932 | 58.995 | 40.013 | 72.800 |
 
+<em>Table 11: Mask2Former with a VAN-B0 backbone where Batch Normalization is replaced by Group Normalization (GN). Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff).</em>
+
+
+
 </div>
 
+<br />
+
+
 #### Results: VAN-B0 with Batch-and-Group Normalization (`tab:BatchGroup`)
+
+<br />
+
 
 <div align="center">
 
@@ -498,19 +769,30 @@ All models in this subsection use **ImageNet-1K pre-trained weights**; however, 
 | 140k | 39.363 | 24.010 | 50.530 | 75.893 | 75.259 | 76.354 | 49.515 | 31.666 | 62.496 |
 | 148800 | 39.380 | 24.001 | 50.565 | 75.692 | 74.797 | 76.343 | 49.678 | 32.019 | 62.521 |
 
+<em>Table 12: Mask2Former with a VAN-B0 backbone where Batch Normalization is replaced by Batch-and-Group Normalization (BGN). Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). ImageNet-1K pre-trained weights are used, but they are not fully compatible because they originate from training the standard VAN-B0 model.</em>
+
 > Notes: BN was replaced with **Batch-and-Group Normalization (BGN)**. Parameters were initialized using **ImageNet-1K pre-trained weights**; however, these weights are not fully compatible because they originate from training the standard VAN-B0 model.
 
 ---
 
 </div>
 
+<br />
+
+
 ### C. Replacing the Pointwise Convolution with an MLP
 
-This subsection reports experimental results obtained by replacing the pointwise convolution in the LKA module with a multi-layer perceptron (MLP). Different hidden-layer sizes were evaluated. Results are reported in Tables `tab:MLP31`, `tab:MLP41`, and `tab:MLP51`.
+This subsection reports experimental results obtained by replacing the pointwise convolution in the LKA module with a multi-layer perceptron (MLP). Different hidden-layer sizes were evaluated. Results are reported in Tables 13, 14, and 15.
 
 All models in this subsection use **ImageNet-1K pre-trained weights**; however, these weights are not fully compatible because they originate from training the standard VAN-B0 model.
 
-#### Results: VAN-B0 with MLP (Hidden size = 3× channels) (`tab:MLP31`)
+<br />
+
+
+#### Results: VAN-B0 with MLP (Hidden size = 3× channels) 
+
+<br />
+
 
 <div align="center">
 
@@ -533,13 +815,21 @@ All models in this subsection use **ImageNet-1K pre-trained weights**; however, 
 | 140k | 53.423 | 38.795 | 64.061 | 79.371 | 77.747 | 80.551 | 65.923 | 49.690 | 77.728 |
 | 148800 | 54.022 | 39.707 | 64.432 | 79.272 | 77.439 | 80.604 | 66.777 | 51.080 | 78.193 |
 
+<em>Table 13: Mask2Former with a VAN-B0 backbone where the LKA pointwise convolution is replaced by an MLP with hidden size 3× the channel dimension. Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). ImageNet-1K pre-trained weights are used, but they are not fully compatible because they originate from training the standard VAN-B0 model.</em>
+
 > Notes: Pointwise convolution in LKA was replaced with an MLP. Each hidden layer has **3×** the number of feature-map channels. Parameters were initialized using **ImageNet-1K pre-trained weights** (not fully compatible, as they originate from training the standard VAN-B0 model).
 
 ---
 
 </div>
 
-#### Results: VAN-B0 with MLP (Hidden size = 4× channels) (`tab:MLP41`)
+<br />
+
+
+#### Results: VAN-B0 with MLP (Hidden size = 4× channels) 
+
+<br />
+
 
 <div align="center">
 
@@ -562,11 +852,19 @@ All models in this subsection use **ImageNet-1K pre-trained weights**; however, 
 | 140k | 54.690 | 42.304 | 63.697 | 79.396 | 77.665 | 80.656 | 67.474 | 53.948 | 77.312 |
 | 148800 | 55.365 | 43.467 | 64.017 | 79.714 | 78.269 | 80.764 | 68.114 | 55.070 | 77.599 |
 
+<em>Table 14: Mask2Former with a VAN-B0 backbone where the LKA pointwise convolution is replaced by an MLP with hidden size 4× the channel dimension. Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). ImageNet-1K pre-trained weights are used, but they are not fully compatible because they originate from training the standard VAN-B0 model.</em>
+
 > Notes: Pointwise convolution in LKA was replaced with an MLP. Each hidden layer has **4×** the number of feature-map channels. Parameters were initialized using **ImageNet-1K pre-trained weights** (not fully compatible, as they originate from training the standard VAN-B0 model).
 
 </div>
 
-#### Results: VAN-B0 with MLP (Hidden size = 5× channels) (`tab:MLP51`)
+<br />
+
+
+#### Results: VAN-B0 with MLP (Hidden size = 5× channels) 
+
+<br />
+
 
 <div align="center">
 
@@ -589,15 +887,26 @@ All models in this subsection use **ImageNet-1K pre-trained weights**; however, 
 | 140k | 54.591 | 41.891 | 63.827 | 79.666 | 78.410 | 80.579 | 67.106 | 52.960 | 77.393 |
 | 148800 | 55.250 | 43.348 | 63.907 | 79.539 | 78.307 | 80.435 | 68.014 | 54.781 | 77.639 |
 
+<em>Table 15: Mask2Former with a VAN-B0 backbone where the LKA pointwise convolution is replaced by an MLP with hidden size 5× the channel dimension. Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). ImageNet-1K pre-trained weights are used, but they are not fully compatible because they originate from training the standard VAN-B0 model.</em>
+
 > Notes: Pointwise convolution in LKA was replaced with an MLP. Each hidden layer has **5×** the number of feature-map channels. Parameters were initialized using **ImageNet-1K pre-trained weights** (not fully compatible, as they originate from training the standard VAN-B0 model).
 
 </div>
 
-After these experiments, the VAN-B0 variant with an MLP hidden size equal to **4×** the number of feature-map channels achieved the best performance. Therefore, it was further evaluated under different normalization methods. In Table `tab:MLP51Group`, Batch Normalization was replaced with **Group Normalization (GN)**, while in Table `tab:MLP51BatchGroup` it was replaced with **Batch-and-Group Normalization (BGN)**.
+<br />
+
+
+After these experiments, the VAN-B0 variant with an MLP hidden size equal to **4×** the number of feature-map channels achieved the best performance. Therefore, it was further evaluated under different normalization methods. In Table 16, Batch Normalization was replaced with **Group Normalization (GN)**, while in Table 17 it was replaced with **Batch-and-Group Normalization (BGN)**.
+
+<br />
+
 
 ---
 
-#### Results: VAN-B0 with MLP (Hidden size = 4× channels) + Group Normalization (`tab:MLP51Group`)
+#### Results: VAN-B0 with MLP (Hidden size = 4× channels) + Group Normalization
+
+<br />
+
 
 <div align="center">
 
@@ -620,11 +929,19 @@ After these experiments, the VAN-B0 variant with an MLP hidden size equal to **4
 | 140k | 41.802 | 23.685 | 54.979 | 72.528 | 65.729 | 77.472 | 52.516 | 31.315 | 67.936 |
 | 148800 | 42.495 | 24.658 | 55.467 | 72.579 | 66.045 | 77.330 | 53.470 | 32.551 | 68.685 |
 
+<em>Table 16: Mask2Former with a VAN-B0 backbone where the LKA pointwise convolution is replaced by an MLP (hidden size 4× channels) and Batch Normalization is replaced by Group Normalization (GN). Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). ImageNet-1K pre-trained weights are used, but they are not fully compatible because they originate from training the standard VAN-B0 model.</em>
+
 > Notes: Pointwise convolution was replaced with an MLP (hidden size = **4×** channels) and Batch Normalization was replaced with **Group Normalization (GN)**. Parameters were initialized using **ImageNet-1K pre-trained weights** (not fully compatible, as they originate from training the standard VAN-B0 model).
 
 </div>
 
-#### Results: VAN-B0 with MLP (Hidden size = 4× channels) + Batch-and-Group Normalization (`tab:MLP51BatchGroup`)
+<br />
+
+
+#### Results: VAN-B0 with MLP (Hidden size = 4× channels) + Batch-and-Group Normalization 
+
+<br />
+
 
 <div align="center">
 
@@ -647,17 +964,27 @@ After these experiments, the VAN-B0 variant with an MLP hidden size equal to **4
 | 140k | 38.563 | 22.252 | 50.425 | 73.678 | 70.995 | 75.630 | 49.050 | 30.296 | 62.690 |
 | 148800 | 38.686 | 21.997 | 50.823 | 74.245 | 71.938 | 75.922 | 49.042 | 29.570 | 63.204 |
 
+<em>Table 17: Mask2Former with a VAN-B0 backbone where the LKA pointwise convolution is replaced by an MLP (hidden size 4× channels) and Batch Normalization is replaced by Batch-and-Group Normalization (BGN). Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). ImageNet-1K pre-trained weights are used, but they are not fully compatible because they originate from training the standard VAN-B0 model.</em>
+
 > Notes: Pointwise convolution was replaced with an MLP (hidden size = **4×** channels) and Batch Normalization was replaced with **Batch-and-Group Normalization (BGN)**. Parameters were initialized using **ImageNet-1K pre-trained weights** (not fully compatible, as they originate from training the standard VAN-B0 model).
 
 ---
 
 </div>
 
+<br />
+
+
 ### D. Multi-Branch LKA (VANmb)
 
-This subsection reports experimental results obtained by replacing the LKA mechanism of VAN [1] with the **multi-branch LKAmb** mechanism described in Section `VANmultibranch`. In these experiments, the **total number of temperature-adjustment iterations** was set to **40,000**.
 
-#### Results: VANmb-B0 with 40,000 temperature-adjustment iterations (`tab:temp40000`)
+
+This subsection reports experimental results obtained by replacing the LKA mechanism of VAN with the **multi-branch LKAmb** mechanism described in Section `Visual Attention Network multi-branch`. In these experiments, the **total number of temperature-adjustment iterations** was set to **40,000**.
+
+#### Results: VANmb-B0 with 40,000 temperature-adjustment iterations 
+
+<br />
+
 
 <div align="center">
 
@@ -680,13 +1007,21 @@ This subsection reports experimental results obtained by replacing the LKA mecha
 | 140k | 55.172 | 43.100 | 63.952 | 79.687 | 78.284 | 80.708 | 68.000 | 54.790 | 77.607 |
 | 148800 | 55.123 | 41.681 | 64.898 | 79.911 | 78.779 | 80.734 | 67.708 | 52.521 | 78.752 |
 
+<em>Table 18: Mask2Former with a VANmb-B0 backbone (LKA replaced by the multi-branch LKAmb mechanism) using a temperature-adjustment iteration budget of 40,000. Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). Parameters were initialized using ImageNet-1K pre-trained weights.</em>
+
 > Notes: VANmb-B0 results with the temperature-adjustment iteration budget set to 40.000. Parameters were initialized using ImageNet-1K pre-trained weights.
 
 </div>
 
-Next, Tables `tab:temp2000010` and `tab:temp200003535` report the corresponding results for a total of 20.000 temperature-adjustment iterations, using learning rates `1e-5` and 3.535 &times; 10<sup>-8</sup> (i.e., 3535 &times; 10<sup>-8</sup>), respectively.
+<br />
 
-#### Results: VANmb-B0 (temperature-adjustment iterations = 20.000, learning rate = `1e-5`) (`tab:temp2000010`)
+
+Next, Tables 19 and 20 report the corresponding results for a total of 20.000 temperature-adjustment iterations, using learning rates `1e-5` and 3535 &times; 10<sup>-8</sup> (i.e., 3535 &times; 10<sup>-8</sup>), respectively.
+
+#### Results: VANmb-B0 (temperature-adjustment iterations = 20.000, learning rate = `1e-5`)
+
+<br />
+
 
 <div align="center">
 
@@ -725,11 +1060,20 @@ Next, Tables `tab:temp2000010` and `tab:temp200003535` report the corresponding 
 | 290k | 46.776 | 27.290 | 60.947 | 78.622 | 77.625 | 79.346 | 58.076 | 35.253 | 74.674 |
 | 297600 | 47.085 | 27.782 | 61.123 | 78.559 | 77.410 | 79.394 | 58.510 | 35.986 | 74.891 |
 
+<em>Table 19: Mask2Former with a VANmb-B0 backbone (LKA replaced by the multi-branch LKAmb mechanism) using 20,000 temperature-adjustment iterations and a learning rate of <code>1e-5</code>. Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). Parameters were initialized using ImageNet-1K pre-trained weights.</em>
+
+
 > Notes: VANmb-B0 results with temperature-adjustment iterations = 20.000 and learning rate = `1e-5`. Parameters were initialized using ImageNet-1K pre-trained weights.
 
 </div>
 
-#### Results: VANmb-B0 (temperature-adjustment iterations = 20.000, learning rate = 3.535 &times; 10<sup>-8</sup>) (`tab:temp200003535`)
+<br />
+
+
+#### Results: VANmb-B0 (temperature-adjustment iterations = 20.000, learning rate = 3535 &times; 10<sup>-8</sup>) 
+
+<br />
+
 
 <div align="center">
 
@@ -768,6 +1112,8 @@ Next, Tables `tab:temp2000010` and `tab:temp200003535` report the corresponding 
 | 290k | 59.360 | 49.611 | 66.450 | 80.360 | 78.868 | 81.446 | 72.636 | 62.406 | 80.077 |
 | 297600 | 59.795 | 49.835 | 67.039 | 80.468 | 78.936 | 81.583 | 73.093 | 62.602 | 80.722 |
 
-> Notes: VANmb-B0 results with temperature-adjustment iterations = 20.000 and learning rate = 3.535 &times; 10<sup>-8</sup> (i.e., 3535 &times; 10<sup>-8</sup>). Parameters were initialized using ImageNet-1K pre-trained weights.
+<em>Table 20: Mask2Former with a VANmb-B0 backbone (LKA replaced by the multi-branch LKAmb mechanism) using 20,000 temperature-adjustment iterations and a learning rate of 3535 &times; 10<sup>-8</sup>. Results are reported across training iterations for PQ, SQ, and RQ (overall, things, and stuff). Parameters were initialized using ImageNet-1K pre-trained weights.</em>
+
+> Notes: VANmb-B0 results with temperature-adjustment iterations = 20.000 and learning rate = 3535 &times; 10<sup>-8</sup> (i.e., 3535 &times; 10<sup>-8</sup>). Parameters were initialized using ImageNet-1K pre-trained weights.
 
 </div>
