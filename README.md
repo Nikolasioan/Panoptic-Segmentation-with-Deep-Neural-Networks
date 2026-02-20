@@ -58,7 +58,7 @@ The LKA mechanism can be expressed as:
 
 
 $$
-\text{Attention}(F)=\text{Conv}_{1\times 1}\left(\text{DW-D-Conv}\!\left(\text{DW-Conv}(F)\right)\right)
+\text{Attention}(F)=\text{Conv}_{1\times 1}\left(\text{DW-D-Conv}\left(\text{DW-Conv}(F)\right)\right)
 $$
 
 <br />
@@ -178,14 +178,14 @@ During the first 20.000 training iterations, a temperature parameter is incorpor
 
 
 $$
-T(\text{step}) = T_{\text{end}} + \left(T_{\text{start}} - T_{\text{end}}\right)\exp\!\left(-T_{\text{start}}\cdot \text{progress}\right)
+T(\text{step}) = T_{\text{end}} + \left(T_{\text{start}} - T_{\text{end}}\right)\exp\left(-T_{\text{start}}\cdot \text{progress}\right)
 $$
 
 <br />
 
 
 $$
-\text{progress}=\min\!\left(\frac{\text{step}}{\text{iterations}},\,1.0\right)
+\text{progress}=\min\left(\frac{\text{step}}{\text{iterations}},\,1.0\right)
 $$
 
 <br />
