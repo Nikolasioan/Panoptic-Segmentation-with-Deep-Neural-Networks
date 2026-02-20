@@ -58,7 +58,7 @@ The LKA mechanism can be expressed as:
 
 
 $$
-\text{Attention}(F)=\text{Conv}_{1\times 1}\!\left(\text{DW-D-Conv}\!\left(\text{DW-Conv}(F)\right)\right)
+\text{Attention}(F)=\text{Conv}_{1\times 1}\left(\text{DW-D-Conv}\!\left(\text{DW-Conv}(F)\right)\right)
 $$
 
 <br />
