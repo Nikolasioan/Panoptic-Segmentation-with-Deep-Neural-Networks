@@ -176,9 +176,8 @@ During the first 20.000 training iterations, a temperature parameter is incorpor
 
 <br />
 
-
 $$
-T(\text{step}) = T_{\text{end}} + \left(T_{\text{start}} - T_{\text{end}}\right)\exp\left(-T_{\text{start}}\cdot \text{progress}\right)
+T(\text{step}) = T_{\text{end}} + \left(T_{\text{start}} - T_{\text{end}}\right)e^{-T_{\text{start}}\cdot \text{progress}}
 $$
 
 <br />
