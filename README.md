@@ -368,7 +368,7 @@ A graphical comparison of Panoptic Quality (PQ) for different hidden-layer sizes
 <p align="center">
   <img src="readMeImages/image-5.png" alt="Panoptic Quality comparison for different normalization methods" width="450">
   <br>
-  <em>Figure 6: Panoptic Quality comparison for different normalization methods.</em>
+  <em>Figure 6: Panoptic Quality comparison for different hidden-layer sizes.</em>
 </p>
 
 </div>
