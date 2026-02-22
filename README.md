@@ -510,7 +510,7 @@ Learning rate: `1e-5`
 | Things | 27.782 | 77.410 | 35.986 |
 | Stuff | 61.123 | 79.394 | 74.891 |
 
-<em>Table 6: Final evaluation of Mask2Former with a VANmb-20000 backbone after 297,600 training iterations (Run A, learning rate <code>1e-5</code>). Results are reported for the All, Things, and Stuff splits in terms of PQ, SQ, and RQ.</em>
+<em>Table 6: Final evaluation of Mask2Former with a VANmb-20000 backbone after 297.600 training iterations (Run A, learning rate <code>1e-5</code>). Results are reported for the All, Things, and Stuff splits in terms of PQ, SQ, and RQ.</em>
 
 
 </div>
@@ -534,7 +534,7 @@ Learning rate: `3535e-5` (i.e., 3535 &times; 10<sup>-8</sup>)
 | Things | 49.835 | 78.936 | 62.602 |
 | Stuff | 67.039 | 81.583 | 80.722 |
 
-<em>Table 7: Final evaluation of Mask2Former with a VANmb-20000 backbone after 297,600 training iterations (Run B, learning rate 3535 &times; 10<sup>-8</sup>). Results are reported for the All, Things, and Stuff splits in terms of PQ, SQ, and RQ.</em>
+<em>Table 7: Final evaluation of Mask2Former with a VANmb-20000 backbone after 297.600 training iterations (Run B, learning rate 3535 &times; 10<sup>-8</sup>). Results are reported for the All, Things, and Stuff splits in terms of PQ, SQ, and RQ.</em>
 
 
 </div>
@@ -743,7 +743,7 @@ All models in this subsection use **ImageNet-1K pre-trained weights**; however, 
 <br />
 
 
-#### Results: VAN-B0 with Batch-and-Group Normalization (`tab:BatchGroup`)
+#### Results: VAN-B0 with Batch-and-Group Normalization
 
 <br />
 
